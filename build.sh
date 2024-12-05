@@ -16,6 +16,7 @@ g++ main.cpp -L. -Wl,--no-as-needed -lmylib -o mainApp
 #echo mainApp dependencies:
 #ldd mainApp
 
+echo ""
 echo Running mainApp:
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ./mainApp
