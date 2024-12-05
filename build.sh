@@ -11,7 +11,7 @@ g++ -shared -o libmylib.so mylib.o
 #ldd libmylib.so
 
 echo Building mainApp...
-g++ main.cpp -L. -lmylib -o mainApp
+g++ main.cpp -L. -Wl,--no-as-needed -lmylib -o mainApp
 
 #echo mainApp dependencies:
 #ldd mainApp
