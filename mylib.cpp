@@ -1,7 +1,7 @@
 #include <iostream>
 
 
-void InitializationTask() {
+int InitializationTask() {
     printf("Library loading.\n");
     return 42;
 }
