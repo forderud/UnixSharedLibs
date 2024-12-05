@@ -6,7 +6,7 @@ int InitializationTask() {
     return 42;
 }
 
-__attribute__((used))
+//__attribute__((used))
 int g_forceLink = InitializationTask();
 
 
