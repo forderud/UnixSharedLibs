@@ -7,7 +7,7 @@ int InitializationTask() {
 }
 
 //__attribute__((used))
-int g_forceLink = InitializationTask();
+static int g_forceLink = InitializationTask();
 
 
 int mylibFunction() {
