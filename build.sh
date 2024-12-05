@@ -12,6 +12,7 @@ g++ -shared -o libmylib.so mylib.o
 #ldd libmylib.so
 
 echo Building mainApp...
+echo "Using -Wl,--no-as-needed to force-link"
 g++ main.cpp -L. -Wl,--no-as-needed -lmylib -o mainApp
 
 #echo mainApp dependencies:
