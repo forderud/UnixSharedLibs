@@ -3,6 +3,7 @@ rm *.o
 rm *.so
 rm mainApp
 
+echo ""
 echo Building libmylib.so...
 g++ -fPIC -c mylib.cpp -o mylib.o
 g++ -shared -o libmylib.so mylib.o
