@@ -1,9 +1,23 @@
 #include <stdio.h>
-#include "mylib.h"
 
+#ifdef USE_DLOPEN
+  #include <dlfcn.h>
+#else
+  #include "mylib.h"
+#endif
 
 int main () {
-    int sum = compute_sum(3, 4);
+    typedef int (*add_function_t)(int a ,int b);
+
+    add_function_t add_function = nullptr;
+#ifdef USE_DLOPEN
+    void* module = dlopen("mylib.so", RTLD_LAZY);
+    add_function = (add_function_t)dlsym(module, "compute_sum");
+#else
+    add_function = compute_sum;
+#endif
+
+    int sum = add_function(3, 4);
     print("Return-value %i\n", sum);
 
     return 0;
