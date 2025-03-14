@@ -7,6 +7,8 @@
 #endif
 
 int main () {
+    printf("executable built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
+    
     typedef int (*add_function_t)(int a ,int b);
 
     add_function_t add_function = nullptr;
