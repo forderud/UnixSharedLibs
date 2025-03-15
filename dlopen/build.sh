@@ -13,7 +13,7 @@ gcc -shared -o libmylib.so mylib.o
 
 echo Building mainApp...
 # -DUSE_DLOPEN
-gcc main.c -DUSE_DLOPEN -L. -lmylib -o mainApp
+gcc main.c -DUSE_DLOPEN -L. -ldl -lmylib -o mainApp
 
 #echo mainApp dependencies:
 #ldd mainApp
