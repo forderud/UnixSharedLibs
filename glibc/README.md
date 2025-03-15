@@ -3,9 +3,9 @@ Test code for loading an "new" shared library on an "old" system with older glib
 The `glibc-2.39` folder contains a precompiled version of "mylib" build with Ubuntu 24.4 (glibc 2.39).
 
 ## Test output
-Experiment conducted on Ubuntu 14.4 (glibc 2.19):
+Experiment conducted on [Ubuntu 14.4](https://releases.ubuntu.com/14.04/) (glibc 2.19):
 * Copy `mylib.o` and `libmylib.so` from glibc-2.39 subfolder to this folder.
-* Disable "mylib" building step in `build.sh`
+* Disable "mylib" building step in `build.sh` so that the precompiled version is used.
 * Run `build.sh` to build and run the test application.
 * Observed output:
 ```
