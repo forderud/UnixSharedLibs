@@ -14,7 +14,7 @@ int main () {
 
     add_function_t add_function = nullptr;
 #ifdef USE_DLOPEN
-    void* module = dlopen("mylib.so", RTLD_LAZY);
+    void* module = dlopen("libmylib.so", RTLD_LAZY);
     assert(module);
     add_function = (add_function_t)dlsym(module, "compute_sum");
     assert(add_function);
