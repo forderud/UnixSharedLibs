@@ -20,7 +20,7 @@ int main () {
 #endif
 
     int sum = add_function(3, 4);
-    print("Return-value %i\n", sum);
+    printf("Return-value %i\n", sum);
 
     return 0;
 }
