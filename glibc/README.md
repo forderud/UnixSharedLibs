@@ -1,6 +1,6 @@
 Test for **loading a new shared library on a system with older glibc version** than the version used to compile the library.
 
-The `glibc-2.39` subfolder contains a precompiled version of "mylib" built with [Ubuntu 24.4](https://releases.ubuntu.com/24.04/) (Linux 6.11, glibc 2.39) to simplify testing.
+The `glibc-2.40` subfolder contains a precompiled version of "mylib" built with [Fedora 41](https://fedoraproject.org/) (Linux 6.11, glibc 2.40) to simplify testing.
 
 ## Experiment
 Experiment conducted on [Ubuntu 14.4](https://releases.ubuntu.com/14.04/) (Linux 4.4, glibc 2.19):
