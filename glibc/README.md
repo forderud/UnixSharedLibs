@@ -21,16 +21,16 @@ Return-value 7
 This demonstrates that a "new" shared library compiled against glibc 2.39 can run on an older system with glibc 2.19. The test succeeds both with implicit (using `-lmylib`) and explicit (define `DUSE_DLOPEN` to switch to `dlopen`) loading of `libmylib.so`, which was a positive surprise.
 
 
-## Generic
+## External resources
 * [Linux binary compatibility explained at 5 levels of difficulty](https://ruvi-d.medium.com/linux-binary-compatibility-explained-at-5-levels-of-difficulty-ffeab6235fc8)
 
-## Ubuntu
+### Ubuntu
 * [glibc package in Ubuntu](https://launchpad.net/ubuntu/+source/glibc): glibc 2.23 in Xenial Xerus (16.04.7 LTS)
 
-## RedHat Enterprise Linux (RHEL)
+### RedHat Enterprise Linux (RHEL)
 * DistroWatch: https://distrowatch.com/table.php?distribution=redhat (glibc 2.28 since RHEL 8.10 and glibc 2.17 since RHEL 7.9)
 
-## glibc links
+### glibc
 * glibc releases: https://sourceware.org/glibc/wiki/Glibc%20Timeline
-* Linux 3.2 or newer required: https://github.com/bminor/glibc/blob/master/README
+* Glibc readme: https://github.com/bminor/glibc/blob/master/README (Linux 3.2 or newer required for latest version)
 * Linux version check: https://github.com/bminor/glibc/blob/master/sysdeps/unix/sysv/linux/configure#L20
