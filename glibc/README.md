@@ -1,4 +1,4 @@
-Test for loading an new shared library on a system with older glibc than the version used to compile the library.
+Test for **loading a new shared library on a system with older glibc version** than the version used to compile the library.
 
 The `glibc-2.39` subfolder contains a precompiled version of "mylib" built with [Ubuntu 24.4](https://releases.ubuntu.com/24.04/) (linux 6.11, glibc 2.39) to simplify testing.
 
