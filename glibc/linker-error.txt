@@ -1,0 +1,8 @@
+./libmylib.so: undefined reference to `std::basic_ios<char, std::char_traits<char> >::operator bool() const@GLIBCXX_3.4.21'
+./libmylib.so: undefined reference to `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)@GLIBCXX_3.4.21'
+./libmylib.so: undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const@GLIBCXX_3.4.21'
+./libmylib.so: undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()@GLIBCXX_3.4.21'
+./libmylib.so: undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@GLIBCXX_3.4.21'
+./libmylib.so: undefined reference to `operator delete(void*, unsigned long)@CXXABI_1.3.9'
+collect2: error: ld returned 1 exit status
+
