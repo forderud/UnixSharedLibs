@@ -12,7 +12,7 @@ int main () {
     
     typedef int (*add_function_t)(int a ,int b);
 
-    add_function_t add_function = nullptr;
+    add_function_t add_function = NULL;
 #ifdef USE_DLOPEN
     void* module = dlopen("libmylib.so", RTLD_LAZY);
     assert(module);
