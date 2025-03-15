@@ -33,5 +33,4 @@ There might be limitations though that are not yet understood. Still, I would as
 
 ### glibc
 * glibc releases: https://sourceware.org/glibc/wiki/Glibc%20Timeline
-* Glibc readme: https://github.com/bminor/glibc/blob/master/README (Linux 3.2 or newer required for latest version)
-* Linux version check: https://github.com/bminor/glibc/blob/master/sysdeps/unix/sysv/linux/configure#L20
+* Glibc readme: https://github.com/bminor/glibc/blob/master/README (glibc 2.39 require Linux 3.2 or newer)
