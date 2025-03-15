@@ -1,5 +1,5 @@
 ## Ubuntu
-* [glibc package in Ubuntu](https://launchpad.net/ubuntu/+source/glibc)
+* [glibc package in Ubuntu](https://launchpad.net/ubuntu/+source/glibc): glibc 2.23 in Xenial Xerus (16.04.7 LTS)
 
 ## RedHat Enterprise Linux (RHEL)
 * DistroWatch: https://distrowatch.com/table.php?distribution=redhat (glibc 2.28 since RHEL 8.10 and glibc 2.17 since RHEL 7.9)
