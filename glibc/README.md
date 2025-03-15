@@ -20,7 +20,7 @@ Return-value 7
 
 This demonstrates that **a "new" shared library compiled against glibc 2.39 can run out of the box on an older system with glibc 2.19**. The test succeeds both with implicit (`-lmylib`) and explicit (`USE_DLOPEN` to switch to `dlopen`) loading of `libmylib.so`, which was a positive surprise.
 
-There might be limitations though that are not yet understood. Still, I would assume that any problems would be easily disoverable, since missing dependencies typically lead to run-time crashes at _startup_, and not problems or crashes later during execution. A simple startup test should therefore suffice to assess compatibility with a given Linux distro release.
+There might be limitations though that are not yet understood. Still, I would assume that any problems would be easily discoverable, since missing dependencies typically lead to run-time crashes at _startup_, and not problems or crashes later during execution. A simple startup test should therefore suffice to assess compatibility with a given Linux distro release.
 
 ## External resources
 * [Linux binary compatibility explained at 5 levels of difficulty](https://ruvi-d.medium.com/linux-binary-compatibility-explained-at-5-levels-of-difficulty-ffeab6235fc8)
