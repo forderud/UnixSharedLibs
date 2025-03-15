@@ -18,7 +18,7 @@ The sum is 7
 Return-value 7
 ``` 
 
-This demonstrates that a "new" shared library compiled against glibc 2.39 can run out of the box on an older system with glibc 2.19. The test succeeds both with implicit (`-lmylib`) and explicit (`USE_DLOPEN` to switch to `dlopen`) loading of `libmylib.so`, which was a positive surprise.
+This demonstrates that **a "new" shared library compiled against glibc 2.39 can run out of the box on an older system with glibc 2.19**. The test succeeds both with implicit (`-lmylib`) and explicit (`USE_DLOPEN` to switch to `dlopen`) loading of `libmylib.so`, which was a positive surprise.
 
 There might be limitations though that are not yet understood. Still, I would assume that any problems would be easily disoverable, since missing dependencies typically lead to run-time crashes at startup.
 
