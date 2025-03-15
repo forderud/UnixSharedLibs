@@ -5,7 +5,7 @@ rm mainApp
 
 echo ""
 echo Building libmylib.so...
-g++ -fPIC -c mylib.cpp -o mylib.o
+g++ -fPIC -c mylib.c -o mylib.o
 g++ -shared -o libmylib.so mylib.o
 
 #echo libmylib.so dependencies:
@@ -13,7 +13,7 @@ g++ -shared -o libmylib.so mylib.o
 
 echo Building mainApp...
 echo "Using -Wl,--no-as-needed to force-link"
-g++ main.cpp -L. -lmylib -o mainApp
+g++ main.c -L. -lmylib -o mainApp
 
 #echo mainApp dependencies:
 #ldd mainApp
