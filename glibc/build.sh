@@ -5,15 +5,15 @@ rm mainApp
 
 echo ""
 echo Building libmylib.so...
-gcc -fPIC -c mylib.c -o mylib.o
-gcc -shared -o libmylib.so mylib.o
+g++ -fPIC -c mylib.c -o mylib.o
+g++ -shared -o libmylib.so mylib.o
 
 #echo libmylib.so dependencies:
 #ldd libmylib.so
 
 echo Building mainApp...
 # -DUSE_DLOPEN
-gcc main.c -DUSE_DLOPEN -L. -ldl -lmylib -o mainApp
+g++ main.c -DUSE_DLOPEN -L. -ldl -lmylib -o mainApp
 
 #echo mainApp dependencies:
 #ldd mainApp
