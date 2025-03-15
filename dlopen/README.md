@@ -1,3 +1,5 @@
+Test code for loading an "new" shared library on an "old" system with older glibc than the version used to compile the library.
+
 ## Generic
 * [Linux binary compatibility explained at 5 levels of difficulty](https://ruvi-d.medium.com/linux-binary-compatibility-explained-at-5-levels-of-difficulty-ffeab6235fc8)
 
