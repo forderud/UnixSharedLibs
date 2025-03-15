@@ -12,7 +12,6 @@ g++ -shared -o libmylib.so mylib.o
 #ldd libmylib.so
 
 echo Building mainApp...
-# -DUSE_DLOPEN
 g++ main.c -DUSE_DLOPEN -L. -ldl -lmylib -o mainApp
 
 #echo mainApp dependencies:
