@@ -12,6 +12,7 @@ int compute_sum (int a, int b) {
     {
         printf("Testing dynamic memory allocation...\n");
         std::vector<uint8_t> buffer(1024*1014, (uint8_t)0);
+        assert(buffer[1024] == 0);
         printf("[success]\n\n");
     }
     {
