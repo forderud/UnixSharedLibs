@@ -6,7 +6,8 @@ rm mainApp
 echo ""
 echo Building libmylib.so...
 g++ -fPIC -c mylib.c -o mylib.o
-g++ -shared -o libmylib.so mylib.o
+# static linking to libgcc & libstdc++ to reduce run-time dependencies
+g++ -shared -static-libgcc -static-libstdc++ -o libmylib.so mylib.o
 
 #echo libmylib.so dependencies:
 #ldd libmylib.so
