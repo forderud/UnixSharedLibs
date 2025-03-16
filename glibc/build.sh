@@ -5,7 +5,8 @@ rm mainApp
 
 echo ""
 echo Building libmylib.so...
-g++ -fPIC -c mylib.c -o mylib.o
+# explicity set C++11 for compatibility with really old compilers that default to C++98
+g++ -std=c++11 -fPIC -c mylib.c -o mylib.o
 # static linking to libgcc & libstdc++ to reduce run-time dependencies
 g++ -shared -static-libgcc -static-libstdc++ -o libmylib.so mylib.o
 
