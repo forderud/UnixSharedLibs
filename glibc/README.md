@@ -10,7 +10,13 @@ Experiment conducted on [Ubuntu 14.4](https://releases.ubuntu.com/14.04/) (Linux
 * Observed output:
 ```
 $ ./build.sh
-./libmylib.so: undefined reference to `std::basic_ios<char, std::char_traits<char> >::operator bool() const@GLIBCXX_3.4.21'
+./libmylib.so: undefined reference to `__isoc23_strtoul@GLIBC_2.38'
+./libmylib.so: undefined reference to `fstat@GLIBC_2.33'
+./libmylib.so: undefined reference to `getentropy@GLIBC_2.25'
+./libmylib.so: undefined reference to `arc4random@GLIBC_2.36'
+./libmylib.so: undefined reference to `pthread_once@GLIBC_2.34'
+./libmylib.so: undefined reference to `_dl_find_object@GLIBC_2.35'
+./libmylib.so: undefined reference to `__libc_single_threaded@GLIBC_2.32'
 ``` 
 
 ~~This demonstrates that **a "new" shared library compiled against glibc 2.39 can run out of the box on an older system with glibc 2.19**. The test succeeds both with implicit (`-lmylib`) and explicit (`dlopen("libmylib.so")`) loading of `libmylib.so`, which was a positive surprise.~~
