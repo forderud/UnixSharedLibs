@@ -11,6 +11,9 @@ echo Building mystaticlib.a...
 g++ -std=c++11 -fPIC -c mystaticlib.cpp -o mystaticlib.o
 ar rcs libmystaticlib.a mystaticlib.o
 
+#echo libmystaticlib.a imports:
+#nm libmystaticlib.a
+
 echo ""
 echo Building libmysharedlib.so...
 g++ -std=c++11 -fPIC -c mysharedlib.cpp -o mysharedlib.o
