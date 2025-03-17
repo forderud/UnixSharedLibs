@@ -1,5 +1,6 @@
 echo Cleaning up...
 rm *.o
+rm *.a
 rm *.so
 rm mainApp
 
