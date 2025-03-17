@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string>
 #include <vector>
-#include "mysharedlib.h"
+#include "mysharedlib.hpp"
 
 
 int compute_sum (int a, int b) {
