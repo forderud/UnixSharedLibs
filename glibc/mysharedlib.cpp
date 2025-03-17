@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include "mysharedlib.hpp"
+#include "mystaticlib.hpp"
 
 
 int compute_sum (int a, int b) {
@@ -25,8 +26,8 @@ int compute_sum (int a, int b) {
         printf("[success]\n\n");
     }
 
-    printf("Computing the sum of %i and %i ...\n", a, b);
-    int sum = a + b;
-    printf("The sum is %i\n", sum);
+    printf("Forwarding computation request to mystaticlib...\n");
+    int sum = compute_sum_static(a, b);
+    printf("mystaticlib returned %i\n", sum);
     return sum;
 }
