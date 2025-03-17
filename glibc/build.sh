@@ -18,7 +18,7 @@ echo ""
 echo Building libmysharedlib.so...
 g++ -std=c++11 -fPIC -c mysharedlib.cpp -o mysharedlib.o
 # use "whole-archive" linking of libmystaticlib to avoid unreferenced compute_sum_static error
-g++ -shared -static-libgcc -static-libstdc++ -Wl,--whole-archive libmystaticlib.a -Wl,--no-whole-archive -o libmysharedlib.so mysharedlib.o
+g++ -shared -static-libgcc -static-libstdc++ -Wl,--whole-archive libmystaticlib.a -Wl,--no-whole-archive  mysharedlib.o -o libmysharedlib.so
 
 echo libmysharedlib.so dependencies:
 ldd libmysharedlib.so
