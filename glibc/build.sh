@@ -5,10 +5,11 @@ rm *.so
 rm mainApp
 
 # explicity set C++11 for compatibility with really old compilers that default to C++98
+compile_flags="-std=c++11 -fPIC"
 
 echo ""
 echo Building static lib...
-g++ -std=c++11 -fPIC -c mystaticlib.cpp -o mystaticlib.o
+g++ $compile_flags -c mystaticlib.cpp -o mystaticlib.o
 ar rcs libmystaticlib.a mystaticlib.o
 
 #echo libmystaticlib.a imports:
@@ -16,7 +17,7 @@ ar rcs libmystaticlib.a mystaticlib.o
 
 echo ""
 echo Building shared lib...
-g++ -std=c++11 -fPIC -c mysharedlib.cpp -o mysharedlib.o
+g++ $compile_flags -c mysharedlib.cpp -o mysharedlib.o
 g++ -shared -static-libgcc -static-libstdc++ mysharedlib.o libmystaticlib.a -o libmysharedlib.so
 
 echo libmysharedlib.so dependencies:
@@ -32,3 +33,4 @@ echo ""
 echo Running application...
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ./mainApp
+
