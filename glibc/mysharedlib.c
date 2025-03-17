@@ -4,11 +4,11 @@
 #include <stdio.h>
 #include <string>
 #include <vector>
-#include "mylib.h"
+#include "mysharedlib.h"
 
 
 int compute_sum (int a, int b) {
-    printf("mylib built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
+    printf("mysharedlib built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
 
     {
         printf("Testing dynamic memory allocation...\n");
