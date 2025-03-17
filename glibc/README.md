@@ -5,6 +5,8 @@ The `glibc-2.40` subfolder contains a precompiled version of "mylib" built with 
 ## Static linking to libgcc & libstdc++
 The `-static-libgcc` and `-static-libstdc++` linker flags are used to link to the static version of these dependent libraries. This eliminates run-time depdendencies to `libgcc_s.so` and `libstdc++.so`.
 
+You might need to install the `libstdc++-static` SW package in order to make the build succeed.
+
 ## Experiment
 Experiment conducted on [Ubuntu 14.4](https://releases.ubuntu.com/14.04/) (Linux 4.4, glibc 2.19):
 * Copy `mylib.o` and `libmylib.so` from glibc-2.40 subfolder to this folder.
