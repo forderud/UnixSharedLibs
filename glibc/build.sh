@@ -14,7 +14,7 @@ g++ -shared -static-libgcc -static-libstdc++ -o libmysharedlib.so mysharedlib.o
 #ldd libmysharedlib.so
 
 echo Building mainApp...
-g++ main.c -DUSE_DLOPEN -L. -ldl -lmysharedlib -o mainApp
+g++ main.cpp -DUSE_DLOPEN -L. -ldl -lmysharedlib -o mainApp
 
 #echo mainApp dependencies:
 #ldd mainApp
