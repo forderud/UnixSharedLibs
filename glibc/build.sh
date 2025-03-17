@@ -20,8 +20,10 @@ echo Building shared lib...
 g++ $compile_flags -c mysharedlib.cpp -o mysharedlib.o
 g++ -shared -static-libgcc -static-libstdc++ mysharedlib.o libmystaticlib.a -o libmysharedlib.so
 
-echo libmysharedlib.so dependencies:
+echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
+#echo Direct shared lib. dependencies:
+#readelf -d libmysharedlib.so
 
 echo Building application...
 g++ main.cpp -DUSE_DLOPEN -L. -ldl -lmysharedlib -o mainApp
