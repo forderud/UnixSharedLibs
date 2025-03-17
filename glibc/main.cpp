@@ -4,7 +4,7 @@
 #ifdef USE_DLOPEN
   #include <dlfcn.h>
 #else
-  #include "mylib.h"
+  #include "mysharedlib.hpp"
 #endif
 
 typedef int (*add_function_t)(int a ,int b);
