@@ -2,6 +2,9 @@ Test for **loading a new shared library on a system with older glibc version** t
 
 The `glibc-2.40` subfolder contains a precompiled version of "mylib" built with [Fedora 41](https://fedoraproject.org/) (Linux 6.11, glibc 2.40) to simplify testing.
 
+## Static linking to libgcc & libstdc++
+The `-static-libgcc` and `-static-libstdc++` linker flags are used to link to the static version of these dependent libraries. This eliminates run-time depdendencies to `libgcc_s.so` and `libstdc++.so`.
+
 ## Experiment
 Experiment conducted on [Ubuntu 14.4](https://releases.ubuntu.com/14.04/) (Linux 4.4, glibc 2.19):
 * Copy `mylib.o` and `libmylib.so` from glibc-2.40 subfolder to this folder.
