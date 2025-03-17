@@ -3,13 +3,17 @@ rm *.o
 rm *.so
 rm mainApp
 
+# explicity set C++11 for compatibility with really old compilers that default to C++98
+
+echo ""
+echo Building mystaticlib.a...
+g++ -std=c++11 -fPIC -c mystaticlib.cpp -o mystaticlib.o
+ar rcs libmystaticlib.a mystaticlib.o
+
 echo ""
 echo Building libmysharedlib.so...
-# explicity set C++11 for compatibility with really old compilers that default to C++98
-g++ -std=c++11 -fPIC -c mystaticlib.cpp -o mystaticlib.o
 g++ -std=c++11 -fPIC -c mysharedlib.cpp -o mysharedlib.o
-# static linking to libgcc & libstdc++ to reduce run-time dependencies
-g++ -shared -static-libgcc -static-libstdc++ -o libmysharedlib.so mystaticlib.o mysharedlib.o
+g++ -shared -static-libgcc -static-libstdc++ -lmystaticlib -o libmysharedlib.so mysharedlib.o
 
 #echo libmysharedlib.so dependencies:
 #ldd libmysharedlib.so
