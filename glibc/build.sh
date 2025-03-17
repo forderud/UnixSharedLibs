@@ -17,7 +17,7 @@ ar rcs libmystaticlib.a mystaticlib.o
 echo ""
 echo Building libmysharedlib.so...
 g++ -std=c++11 -fPIC -c mysharedlib.cpp -o mysharedlib.o
-g++ -shared -static-libgcc -static-libstdc++ -L. -Wl,--whole-archive -lmystaticlib -Wl,--no-whole-archive -o libmysharedlib.so mysharedlib.o
+g++ -shared -static-libgcc -static-libstdc++ -Wl,--whole-archive libmystaticlib.a -Wl,--no-whole-archive -o libmysharedlib.so mysharedlib.o
 
 #echo libmysharedlib.so dependencies:
 #ldd libmysharedlib.so
