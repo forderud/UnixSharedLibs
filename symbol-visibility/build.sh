@@ -27,7 +27,7 @@ ldd libmysharedlib.so
 #readelf -d libmysharedlib.so
 
 echo shared lib. exports:
-readelf --symbols libmysharedlib.so 
+readelf --symbols --use-dynamic libmysharedlib.so 
 
 echo Building application...
 g++ main.cpp -L. -lmysharedlib -o mainApp
