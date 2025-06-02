@@ -24,6 +24,9 @@ ldd libmysharedlib.so
 #echo Direct shared lib. dependencies:
 #readelf -d libmysharedlib.so
 
+#echo shared lib. exports:
+#readelf -Ws libmysharedlib.so 
+
 echo Building application...
 g++ main.cpp -L. -lmysharedlib -o mainApp
 
