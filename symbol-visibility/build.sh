@@ -27,8 +27,8 @@ ldd libmysharedlib.so
 echo Building application...
 g++ main.cpp -L. -lmysharedlib -o mainApp
 
-#echo mainApp dependencies:
-#ldd mainApp
+echo mainApp dependencies:
+ldd mainApp
 
 echo ""
 echo Running application...
