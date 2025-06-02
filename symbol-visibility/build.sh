@@ -17,8 +17,8 @@ ar rcs libmystaticlib.a mystaticlib.o
 echo ""
 echo Building shared lib...
 g++ $compile_flags -c mysharedlib.cpp -o mysharedlib.o
-# Passing -Wl,--exclude-libs,ALL to limit the number of libgcc/libstdc++ functions exported
-g++ $compile_flags -shared -static-libgcc -static-libstdc++ mysharedlib.o libmystaticlib.a -o libmysharedlib.so -Wl,--exclude-libs,ALL
+# Can also pass -Wl,--exclude-libs,ALL avoid re-exporting symbols from all linked-in archives
+g++ $compile_flags -shared -static-libgcc -static-libstdc++ mysharedlib.o libmystaticlib.a -o libmysharedlib.so -Wl,--exclude-libs,libgcc -Wl,--exclude-libs,libstdc++
 
 echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
