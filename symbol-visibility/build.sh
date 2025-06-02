@@ -17,8 +17,7 @@ ar rcs libmystaticlib.a mystaticlib.o
 echo ""
 echo Building shared lib...
 g++ $compile_flags -c mysharedlib.cpp -o mysharedlib.o
-# TODO: Test -Wl,--no-whole-archive
-# TODO: Test -Wl,--exclude-libs,ALL
+# Passing -Wl,--exclude-libs,ALL to limit the number of libgcc/libstdc++ functions exported
 g++ $compile_flags -shared -static-libgcc -static-libstdc++ mysharedlib.o libmystaticlib.a -o libmysharedlib.so -Wl,--exclude-libs,ALL
 
 echo Transitive shared lib. dependencies:
