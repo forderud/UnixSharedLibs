@@ -31,7 +31,7 @@ void test_internal_exception () {
 
     try {
         throw_custom_exception("Some error");
-    } catch (std::exception& e) {
+    } catch (dcm::bad_type& e) {
         printf("Expected exception: %s\n", e.what());
     }
 
