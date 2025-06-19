@@ -17,7 +17,8 @@ ar rcs libmystaticlib.a mystaticlib.o
 echo ""
 echo Building shared lib...
 g++ $compile_flags -c mysharedlib.cpp -o mysharedlib.o
-# Can also pass -Wl,--exclude-libs,libgcc -Wl,--exclude-libs,libstdc++ to export a few more std::exception and std::basic_string types
+# passing -static-libgcc -static-libstdc++ to avoid run-time dependencies to C/C++ libraries
+# passing -Wl,--exclude-libs,ALL to avoid exposing 3rd party lib. symbols
 g++ $compile_flags -shared -static-libgcc -static-libstdc++ mysharedlib.o libmystaticlib.a -o libmysharedlib.so -Wl,--exclude-libs,ALL
 
 echo Transitive shared lib. dependencies:
