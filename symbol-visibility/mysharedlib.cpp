@@ -24,7 +24,13 @@ void test_internal_exception () {
     printf("Testing internal exception throw & catch..\n");
     
     try {
-        throw_exception_static("Some error");
+        throw_standard_exception("Some error");
+    } catch (std::exception& e) {
+        printf("Expected exception: %s\n", e.what());
+    }
+
+    try {
+        throw_custom_exception("Some error");
     } catch (std::exception& e) {
         printf("Expected exception: %s\n", e.what());
     }
