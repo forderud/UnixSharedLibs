@@ -5,7 +5,7 @@ rm *.so
 rm mainApp
 
 # Doc: https://gcc.gnu.org/wiki/Visibility
-compile_flags="-fvisibility=hidden -fPIC"
+compile_flags="-fvisibility=hidden -fvisibility-inlines-hidden -fPIC"
 
 echo ""
 echo Building static lib...
