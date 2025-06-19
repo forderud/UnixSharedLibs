@@ -4,6 +4,7 @@ rm *.a
 rm *.so
 rm mainApp
 
+# Doc: https://gcc.gnu.org/wiki/Visibility
 compile_flags="-fvisibility=hidden -fPIC"
 
 echo ""
