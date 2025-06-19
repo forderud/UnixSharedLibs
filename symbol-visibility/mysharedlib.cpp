@@ -19,3 +19,15 @@ int compute_sum (int a, int b) {
     printf("mystaticlib returned %i\n", sum);
     return sum;
 }
+
+void test_internal_exception () {
+    printf("Testing internal exception throw & catch..\n");
+    
+    try {
+        throw_exception_static("Some error");
+    } catch (std::exception& e) {
+        printf("Expected exception: %s\n", e.what());
+    }
+
+    printf("[done]\n");
+}

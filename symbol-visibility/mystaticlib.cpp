@@ -2,6 +2,7 @@
 #include <cstdint>
 #include <stdio.h>
 #include <string>
+#include <stdexcept>
 #include "mystaticlib.hpp"
 
 
@@ -10,4 +11,8 @@ int compute_sum_static (int a, int b) {
     int sum = a + b;
     printf("The sum is %i\n", sum);
     return sum;
+}
+
+void throw_exception_static (const char* message) {
+    throw std::runtime_error(message);
 }
