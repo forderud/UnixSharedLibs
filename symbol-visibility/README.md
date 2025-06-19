@@ -1,4 +1,4 @@
-Experiements static linking of the C++ standard library and other dependencies in shared libraries on Linux.
+Experiments with static linking of the C++ standard library and other dependencies in Linux shared libraries.
 
 **PROBLEM**: How to encapsulate C++ usage in a shared library (`.so`) with a "C" API without exposing any C++ symbols to the client?
 
