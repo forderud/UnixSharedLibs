@@ -25,13 +25,13 @@ void test_internal_exception () {
     
     try {
         throw_standard_exception("Some error");
-    } catch (std::exception& e) {
+    } catch (const std::exception& e) {
         printf("Expected exception: %s\n", e.what());
     }
 
     try {
         throw_custom_exception("Some error");
-    } catch (dcm::bad_type& e) {
+    } catch (const dcm::bad_type& e) {
         printf("Expected exception: %s\n", e.what());
     }
 
