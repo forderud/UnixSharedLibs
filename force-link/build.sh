@@ -1,7 +1,5 @@
 echo Cleaning up...
-rm *.o
-rm *.so
-rm mainApp
+rm -f *.o *.so mainApp
 
 echo ""
 echo Building libmylib.so...
