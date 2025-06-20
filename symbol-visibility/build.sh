@@ -1,8 +1,5 @@
 echo Cleaning up...
-rm *.o
-rm *.a
-rm *.so
-rm mainApp
+rm -f *.o *.a *.so mainApp
 
 # Doc: https://gcc.gnu.org/wiki/Visibility
 compile_flags="-fvisibility=hidden -fvisibility-inlines-hidden -fPIC"
