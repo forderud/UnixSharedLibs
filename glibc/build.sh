@@ -1,8 +1,5 @@
 echo Cleaning up...
-rm *.o
-rm *.a
-rm *.so
-rm mainApp
+rm -f *.o *.a *.so mainApp
 
 # explicity set C++11 for compatibility with really old compilers that default to C++98
 compile_flags="-std=c++11 -fPIC"
