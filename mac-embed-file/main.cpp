@@ -1,6 +1,6 @@
 #include <iostream>
-#include <mach-o/getsect.h> // Or <mach-o/ldsyms.h> for _mh_execute_header
-#include <mach-o/ldsyms.h>  // For _mh_execute_header
+#include <mach-o/getsect.h> // for getsectiondata
+#include <mach-o/ldsyms.h>  // for _mh_execute_header
 
 
 int main() {
