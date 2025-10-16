@@ -1,3 +1,3 @@
 #pragma once
 
-void print_embedded_file (const char* segment_name);
+void print_embedded_file (const char* section_name);
