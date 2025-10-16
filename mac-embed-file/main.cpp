@@ -8,6 +8,6 @@ int main() {
     const uint8_t* embed_example_start = getsectiondata(&_mh_execute_header, "__TEXT", "embed_example", &embed_example_size);
 
     printf("Content of embed_example.txt:\n");
-    printf("%.*s\n", embed_example_size, embed_example_start); // specify size since file content is not null-terminated
+    printf("%.*s\n", (int)embed_example_size, embed_example_start); // specify size since file content is not null-terminated
     return 0;
 }
