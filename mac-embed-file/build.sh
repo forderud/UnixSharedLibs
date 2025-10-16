@@ -7,5 +7,4 @@ g++ main.cpp -r -sectcreate __TEXT embed_example embed_example.txt -o mainApp
 
 echo ""
 echo Running mainApp:
-export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ./mainApp
