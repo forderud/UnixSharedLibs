@@ -1,12 +1,13 @@
 #include <iostream>
-
-extern char _binary_embed_example_txt_start[]; // start of embedded ASCII file
-extern char _binary_embed_example_txt_end[];
+#include <mach-o/getsect.h> // Or <mach-o/ldsyms.h> for _mh_execute_header
+#include <mach-o/ldsyms.h>  // For _mh_execute_header
 
 
 int main() {
+    unsigned long embed_example_size = 0;
+    const uint8_t* embed_example_start = getsectiondata(&_mh_execute_header, "__TEXT", "embed_example", &embed_example_size);
+
     printf("Content of embed_example.txt:\n");
-    size_t fileSize = _binary_embed_example_txt_end - _binary_embed_example_txt_start;
-    printf("%.*s\n", fileSize, _binary_embed_example_txt_start); // specify size since file content is not null-terminated
+    printf("%.*s\n", embed_example_size, embed_example_start); // specify size since file content is not null-terminated
     return 0;
 }
