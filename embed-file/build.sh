@@ -5,7 +5,7 @@ rm -f *.o mainApp
 ld -r -b binary -o example.o example.txt
 
 echo Building mainApp...
-g++ main.cpp -L. example.o -o mainApp
+g++ main.cpp example.o -o mainApp
 
 echo ""
 echo Running mainApp:
