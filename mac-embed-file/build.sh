@@ -3,6 +3,7 @@ rm -f *.o *.a mainApp
 
 echo Building static library that embeds a binary file...
 g++ -c mystaticlib.cpp -o lib_sources.o
+# NOTE: section names cannot be longer than 16 chars
 ld  lib_sources.o -r -sectcreate __TEXT embed_example embed_example.txt -o mystaticlib.o
 libtool -static mystaticlib.o -o libmystatic.a
 
