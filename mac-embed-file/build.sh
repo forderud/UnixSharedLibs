@@ -1,5 +1,5 @@
 echo Cleaning up...
-rm -f *.o mainApp
+rm -f *.o stub.c mainApp
 
 # convert embed_example.txt into an object file to binary embedding
 touch stub.c
