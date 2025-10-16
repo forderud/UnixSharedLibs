@@ -2,6 +2,7 @@
 
 
 int main() {
-    print_embedded_file ("embed_example");
+    // call function in static library
+    print_embedded_file("embed_example");
     return 0;
 }

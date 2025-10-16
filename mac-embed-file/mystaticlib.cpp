@@ -4,6 +4,7 @@
 
 
 void print_embedded_file (const char* segment_name) {
+    // access embedded binary file
     unsigned long embed_example_size = 0;
     const uint8_t* embed_example_start = getsectiondata(&_mh_execute_header, "__TEXT", segment_name, &embed_example_size);
 
