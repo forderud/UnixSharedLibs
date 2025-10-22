@@ -13,11 +13,10 @@ In file included from main.cpp:2:
 1 warning generated.
 ```
 
-This is a blocker, since it will prevent usage in Apple App store apps.
+This is a blocker, since it will prevent usage in Apple App store apps. Will probably need to use `ld -r -b binary` instead.
 
 ## Windows
-Not really supported, since adoption will require adoption of an ad-hoc `incbin.exe` preprocessor tool.
-
+Not attractive, since adoption will require adoption of an ad-hoc `incbin.exe` preprocessor tool. It's then better to instead rely on `RCDATA` embeding.
 
 ## WASM
-Unsupported platform.
+Unsupported platform. Will probably need to use `--embed-file` instead.
