@@ -1,9 +1,11 @@
 Test of using https://github.com/graphitemaster/incbin for binary file embeding
 
-## Linux
+## Linux & Android
 Everything seem to work fine, with no observed problems.
 
-## MacOS & iOS problem
+Not yet tested on Andriod.
+
+## MacOS & iOS
 Observed build warning:
 ```
 In file included from main.cpp:2:
