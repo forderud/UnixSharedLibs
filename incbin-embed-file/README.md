@@ -19,4 +19,4 @@ This is a blocker, since it will prevent usage in Apple App store apps. Will pro
 Not attractive, since adoption will require adoption of an ad-hoc `incbin.exe` preprocessor tool. It's then better to instead rely on `RCDATA` embeding.
 
 ## WASM
-Unsupported platform. Will probably need to use `--embed-file` instead.
+Unsupported platform ([issue #37](https://github.com/graphitemaster/incbin/issues/37)). Will probably need to use `--embed-file` instead.
