@@ -7,5 +7,4 @@ g++ main.cpp -o mainApp
 
 echo ""
 echo Running mainApp:
-export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ./mainApp
