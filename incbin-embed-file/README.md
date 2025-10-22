@@ -13,4 +13,11 @@ In file included from main.cpp:2:
 1 warning generated.
 ```
 
-This is a showstopper, since it will prevent usage in Apple App store.
+This is a blocker, since it will prevent usage in Apple App store apps.
+
+## Windows
+Not really supported, since adoption will require adoption of a `incbin.exe` preprocessor tool.
+
+
+## WASM
+Unsupported platform.
