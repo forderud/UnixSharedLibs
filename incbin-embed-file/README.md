@@ -15,7 +15,7 @@ In file included from main.cpp:2:
 1 warning generated.
 ```
 
-This is a blocker, since it will prevent usage in Apple App store apps. Will probably need to use `ld -r -b binary` instead.
+This is a blocker if still relevant, since it will prevent usage in Apple App store apps. Have submitted [incbin PR #72](https://github.com/graphitemaster/incbin/pull/72) to clarify the current state. May need to use `ld -r -b binary` instead if still relevant.
 
 ## Windows
 Not attractive, since adoption will require adoption of an ad-hoc `incbin.exe` preprocessor tool. It's then better to instead rely on `RCDATA` embeding.
