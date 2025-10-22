@@ -9,5 +9,4 @@ g++ main.cpp embed_example.o -o mainApp
 
 echo ""
 echo Running mainApp:
-export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ./mainApp
