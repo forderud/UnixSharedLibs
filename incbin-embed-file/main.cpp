@@ -2,8 +2,9 @@
 #include <string_view>
 #include "incbin.h"
 
-#define GetEmbeddedFile(NAME) \
-    (std::string_view((const char*)g##NAME##Data, g##NAME##Size))
+#define GetEmbeddedFile(NAME) { \
+    (std::string_view((const char*)g##NAME##Data, g##NAME##Size)) \
+}
 
 INCBIN(EmbedExample, "embed_example.txt");
 
