@@ -6,4 +6,4 @@ Experiments with static linking of the C++ standard library and other dependenci
 
 ## Documentation
 * GCC [Symbol Visibility](https://gcc.gnu.org/wiki/Visibility) - covers `-fvisibility=hidden` and `-fvisibility-inlines-hidden`
-* `-static-libgcc` `-static-libstdc++`
+* GVV [Options for Linking](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html) - covers `-static-libgcc` and `-static-libstdc++`
