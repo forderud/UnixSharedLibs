@@ -6,7 +6,10 @@
     (std::string_view((const char*)g##NAME##Data, g##NAME##Size)) \
 }
 
+
 INCBIN(EmbedExample, "embed_example.txt");
+//INCTXT_EXTERN(EmbedExample);
+
 
 int main() {
     std::string_view file = GetEmbeddedFile(EmbedExample);
