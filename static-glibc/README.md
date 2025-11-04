@@ -40,3 +40,6 @@ There might be limitations though that are not yet understood. Still, I would as
 ### glibc
 * glibc releases: https://sourceware.org/glibc/wiki/Glibc%20Timeline
 * Glibc readme: https://github.com/bminor/glibc/blob/master/README (glibc 2.39 require Linux 3.2 or newer)
+
+### Example projects
+* Mesa3D [gallium.py](https://github.com/notaz/mesa/blob/master/scons/gallium.py#L590) - defines `-static-libgcc`, `-static-libstdc++` (and more) for windows builds
