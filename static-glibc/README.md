@@ -43,3 +43,5 @@ There might be limitations though that are not yet understood. Still, I would as
 
 ### Example projects
 * Mesa3D [gallium.py](https://github.com/notaz/mesa/blob/master/scons/gallium.py#L590) - defines `-static-libgcc`, `-static-libstdc++` (and more) for windows builds
+* Mesa3D [opencl/Makefile.am](https://github.com/notaz/mesa/blob/master/src/gallium/targets/opencl/Makefile.am) - passes `--version-script=opencl.sym`
+* 
