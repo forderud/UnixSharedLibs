@@ -1,0 +1,6 @@
+{
+global:
+    compute_sum;
+local:
+    *;
+};
