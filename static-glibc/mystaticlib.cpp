@@ -8,6 +8,7 @@
 
 int compute_sum_static (int a, int b) {
     printf("mystaticlib built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
+    printf("mystaticlib built against libstdc++ %d\n", __GLIBCXX__); // was __GLIBCPP__ before 3.4.0
 
     {
         printf("Testing file I/O...\n");
