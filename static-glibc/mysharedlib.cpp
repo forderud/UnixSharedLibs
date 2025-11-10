@@ -1,5 +1,6 @@
 #include <cassert>
 #include <cstdint>
+#include <future>
 #include <string>
 #include <vector>
 #include "mysharedlib.hpp"
@@ -14,6 +15,15 @@ int compute_sum (int a, int b) {
         std::vector<uint8_t> buffer(1024*1014, (uint8_t)0);
         assert(buffer[1024] == 0);
         printf("[success]\n\n");
+    }
+
+    {
+        // test std::async to introduce dependency to C++ standard library
+        std::future<int> multiply = std::async(std::launch::async, [](int a, int b){
+            return a * b;
+        }, 3, 4);
+        
+        printf("async multiply returned %i\n", multiply.get());
     }
 
     printf("Forwarding computation request to mystaticlib...\n");
