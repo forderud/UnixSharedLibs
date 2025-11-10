@@ -31,7 +31,7 @@ There might be limitations though that are not yet understood. Still, I would as
 ## External resources
 Documentation:
 * GCC [Options for Linking](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html) - covers `-static-libgcc` and `-static-libstdc++`
-* GNU binutils [ld](https://sourceware.org/binutils/docs/ld.html) - covers `-Bsymbolic` and `-Bsymbolic-functions`
+* GNU binutils [LD](https://sourceware.org/binutils/docs/ld.html) doc - covers `-Bsymbolic` and `-Bsymbolic-functions`
 
 Articles:
 * [Statically linking libstdc++](https://codearcana.com/posts/2015/12/09/statically-linking-libstdc.html) - also mentions `-Bsymbolic-functions`
