@@ -22,7 +22,7 @@ $ ./build.sh
 ./libmylib.so: undefined reference to `pthread_once@GLIBC_2.34'
 ./libmylib.so: undefined reference to `_dl_find_object@GLIBC_2.35'
 ./libmylib.so: undefined reference to `__libc_single_threaded@GLIBC_2.32'
-``` 
+```
 
 ~~This demonstrates that **a "new" shared library compiled against glibc 2.39 can run out of the box on an older system with glibc 2.19**. The test succeeds both with implicit (`-lmylib`) and explicit (`dlopen("libmylib.so")`) loading of `libmylib.so`, which was a positive surprise.~~
 
