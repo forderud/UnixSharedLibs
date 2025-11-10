@@ -29,13 +29,15 @@ $ ./build.sh
 There might be limitations though that are not yet understood. Still, I would assume that any problems would be easily discoverable, since missing dependencies typically lead to run-time crashes at _startup_, and not problems or crashes later during execution. A simple startup test should therefore suffice to assess compatibility with a given Linux distro release.
 
 ## External resources
+Documentation:
 * GCC [Options for Linking](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html) - covers `-static-libgcc` and `-static-libstdc++`
 * GNU binutils [ld](https://sourceware.org/binutils/docs/ld.html) - covers `-Bsymbolic` and `-Bsymbolic-functions`
-* [Statically linking libstdc++](https://codearcana.com/posts/2015/12/09/statically-linking-libstdc.html) - also covers `-Bsymbolic-functions`
+
+Articles:
+* [Statically linking libstdc++](https://codearcana.com/posts/2015/12/09/statically-linking-libstdc.html) - also mentions `-Bsymbolic-functions`
 * [Linux binary compatibility explained at 5 levels of difficulty](https://ruvi-d.medium.com/linux-binary-compatibility-explained-at-5-levels-of-difficulty-ffeab6235fc8)
 * [glibc package in Ubuntu](https://launchpad.net/ubuntu/+source/glibc): glibc 2.23 in Xenial Xerus (16.04.7 LTS)
 * DistroWatch: https://distrowatch.com/table.php?distribution=redhat (glibc 2.28 since RHEL 8.10 and glibc 2.17 since RHEL 7.9)
-
 
 ### glibc
 * glibc releases: https://sourceware.org/glibc/wiki/Glibc%20Timeline
