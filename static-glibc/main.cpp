@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
+#include <cstdint>
 
 #ifdef USE_DLOPEN
   #include <dlfcn.h>
@@ -11,7 +12,8 @@ typedef int (*add_function_t)(int a ,int b);
 
 int main () {
     printf("executable built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
-    
+    printf("executable built against libstdc++ %d\n", __GLIBCXX__); // was __GLIBCPP__ before 3.4.0
+
     add_function_t add_function = NULL;
 #ifdef USE_DLOPEN
     void* module = dlopen("libmysharedlib.so", RTLD_LAZY);
