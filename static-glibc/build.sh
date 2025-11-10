@@ -15,7 +15,8 @@ ar rcs libmystaticlib.a mystaticlib.o
 echo ""
 echo Building shared lib...
 g++ $compile_flags -c mysharedlib.cpp -o mysharedlib.o
-g++ -shared -static-libgcc -static-libstdc++ -Wl,--version-script=mysharedlib.vers -Wl,-Bsymbolic -Wl,-Bsymbolic-functions mysharedlib.o libmystaticlib.a -o libmysharedlib.so
+sharedlib_flags="-Wl,-Bsymbolic -Wl,-Bsymbolic-functions" # TODO: Learn how to use these flags
+g++ -shared -static-libgcc -static-libstdc++ -Wl,--version-script=mysharedlib.vers $sharedlib_flags mysharedlib.o libmystaticlib.a -o libmysharedlib.so
 
 echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
