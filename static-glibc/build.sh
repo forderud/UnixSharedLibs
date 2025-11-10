@@ -19,8 +19,8 @@ g++ -shared -static-libgcc -static-libstdc++ -Wl,--version-script=mysharedlib.ve
 
 echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
-#echo Direct shared lib. dependencies:
-#readelf -d libmysharedlib.so
+echo Direct shared lib. dependencies:
+readelf -d libmysharedlib.so
 
 echo Building application...
 g++ main.cpp -DUSE_DLOPEN -L. -ldl -lmysharedlib -o mainApp
