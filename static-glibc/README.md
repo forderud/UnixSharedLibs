@@ -45,7 +45,7 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 
 ## Code samples
 ### Apitrace example
-* [CMakeLists.txt](https://github.com/apitrace/apitrace/blob/master/wrappers/CMakeLists.txt) - defines `-static-libgcc` `-static-libstdc++` and passes `--version-script`
+* [CMakeLists.txt](https://github.com/apitrace/apitrace/blob/master/wrappers/CMakeLists.txt) - defines `-static-libgcc` `-static-libstdc++`, `--version-script` and `-Wl,-Bsymbolic -Wl,-Bsymbolic-functions`
 * [glxtrace.version](https://github.com/apitrace/apitrace/blob/master/wrappers/glxtrace.version) - lists functions to export
 
 ### Mesa3D example
