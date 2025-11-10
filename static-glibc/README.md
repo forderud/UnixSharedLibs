@@ -40,6 +40,9 @@ There might be limitations though that are not yet understood. Still, I would as
 * glibc releases: https://sourceware.org/glibc/wiki/Glibc%20Timeline
 * Glibc readme: https://github.com/bminor/glibc/blob/master/README (glibc 2.39 require Linux 3.2 or newer)
 
+## Alternative: Bundle libstdc++ and RPATH
+Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
+
 ## Code samples
 ### Apitrace example
 * [CMakeLists.txt](https://github.com/apitrace/apitrace/blob/master/wrappers/CMakeLists.txt) - defines `-static-libgcc` `-static-libstdc++` and passes `--version-script`
