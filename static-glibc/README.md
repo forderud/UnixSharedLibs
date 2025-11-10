@@ -49,6 +49,6 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 * [glxtrace.version](https://github.com/apitrace/apitrace/blob/master/wrappers/glxtrace.version) - lists functions to export
 
 ### Mesa3D example
-* Mesa3D [gallium.py](https://github.com/notaz/mesa/blob/master/scons/gallium.py#L590) - defines `-static-libgcc`, `-static-libstdc++` (and more) for windows builds
+* Mesa3D [gallium.py](https://github.com/notaz/mesa/blob/master/scons/gallium.py#L590) - defines `-static-libgcc`, `-static-libstdc++` (for windows builds), `-Wl,-Bsymbolic` and more
 * Mesa3D [opencl/Makefile.am](https://github.com/notaz/mesa/blob/master/src/gallium/targets/opencl/Makefile.am) - passes `--version-script=opencl.sym`
 * Mesa3D [opencl/opencl.sym](https://github.com/notaz/mesa/blob/master/src/gallium/targets/opencl/opencl.sym) - lists functions to export
