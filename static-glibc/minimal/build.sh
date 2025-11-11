@@ -13,7 +13,7 @@ compile_flags=""
 #compile_flags="$compile_flags -isystem /usr/local/glibc-2.26/include"
 
 echo Building shared C library..
-g++ -shared $compile_flags $link_flags sharedlib.cpp -L. -o libsharedLib.so
+g++ -shared $compile_flags $link_flags -static-libgcc -static-libstdc++ sharedlib.cpp -L. -o libsharedLib.so
 
 echo Transitive shared lib. dependencies:
 ldd libsharedlib.so
