@@ -19,6 +19,8 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 
 ### Alternative 3: Install old glibc on new build system
 
+Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.tecmint.com/install-multiple-glibc-libraries-linux/).
+
 #### Benefit
 * Mostly modern build system, except for old glibc
 #### Drawback
