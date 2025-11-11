@@ -3,7 +3,7 @@ Test code for different approaches for building **shared libraries** that are **
 ### Alternative 1: Build on oldest supported system
 
 #### Benefit
-* Everything works out-of-the-box with not custom build settings required.
+* Everything works out-of-the-box with no custom build settings required.
 #### Drawback
 * Outdated build environment. Increasingly difficult to adopt compiler and 3rd party library updates over time.
 
