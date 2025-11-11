@@ -1,3 +1,4 @@
+#!/bin/bash
 echo Cleaning up...
 rm -f *.o *.a *.so mainApp
 
