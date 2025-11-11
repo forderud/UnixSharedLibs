@@ -17,7 +17,7 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 * Adopters might not be interested in using a custom libstdc++ library version together with the library being shared.
 
 
-### Alternative 3: Install old glibc on new build system
+### Alternative 3: Install old glibc on build system
 
 Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.tecmint.com/install-multiple-glibc-libraries-linux/).
 
