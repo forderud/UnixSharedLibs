@@ -30,7 +30,7 @@ Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.
 ### Alternative 4: Static linking to libgcc & libstdc++
 The `-static-libgcc` and `-static-libstdc++` linker flags are used to link to the static version of these dependent libraries. This eliminates run-time depdendencies to `libgcc_s.so` and `libstdc++.so`.
 
-You might need to install the `libstdc++-static` SW package in order to make the build succeed.
+NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https://packages.fedoraproject.org/pkgs/gcc/libstdc++-static/) package.
 
 #### Benefit
 * Avoid compatibility problems by making the binaries self-contained.
