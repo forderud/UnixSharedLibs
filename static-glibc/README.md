@@ -17,12 +17,12 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 | Drawback | Adopters might not be interested in setting `RPATH` to use the custom libstdc++ library together with the rest of their codebase. |
 
 
-### Alternative 3: Install old glibc on build system
+### Alternative 3: Install old glibc on new build system
 
 Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.tecmint.com/install-multiple-glibc-libraries-linux/) explains how to build & install an old glibc version. Then, `export LD_LIBRARY_PATH=/opt/glibc-<version>/lib:$LD_LIBRARY_PATH` to explicitly build against the old glibc version.
 
-|   | Install old glibc on build system |
-|---|-----------------------------------|
+|   | Install old glibc on new build system |
+|---|---------------------------------------|
 | Benefit | Mostly modern build system, except for old glibc. |
 | Drawback | TBD. |
 
