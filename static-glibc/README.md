@@ -27,7 +27,7 @@ Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.
 * Need to use `export LD_LIBRARY_PATH=/opt/glibc-<version>/lib:$LD_LIBRARY_PATH` to explicitly build against the old glibc version.
 
 
-### Alternative 4: Static linking to libgcc & libstdc++
+### Alternative 4: Static linking to libgcc/musl & libstdc++
 The `-static-libgcc` and `-static-libstdc++` linker flags are used to link to the static version of these dependent libraries. This eliminates run-time depdendencies to `libgcc_s.so` and `libstdc++.so`.
 
 NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https://packages.fedoraproject.org/pkgs/gcc/libstdc++-static/) package.
