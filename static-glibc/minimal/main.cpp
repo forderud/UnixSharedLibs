@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <cassert>
 #include <pthread.h>
-#include "sharedlib.h"
+#include "sharedlib.hpp"
 
 static void* thread_function(void*) {
     printf("Hello from thread!\n");

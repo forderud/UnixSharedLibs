@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "sharedlib.h"
+#include "sharedlib.hpp"
 
 
 int compute_sum (int a, int b) {
