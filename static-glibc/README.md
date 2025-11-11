@@ -35,8 +35,8 @@ NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https:
 #### Benefit
 * Avoid compatibility problems by making the binaries self-contained.
 #### Drawback
-* More difficult to configure. Might require also switching from glibc to the "musl" C library.
-
+* More difficult to configure build settings.
+* Might require also switching from glibc to the "musl" C library.
 
 
 ## External resources
