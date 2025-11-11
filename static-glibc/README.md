@@ -1,4 +1,4 @@
-Test for **loading a new shared library on a system with older glibc version** than the version used to compile the library.
+Test code for different approaches for building **shared libraries** that are **compatible with older glibc versions** than the version used to compile the library.
 
 ### Alternative 1: Build on oldest supported system
 
