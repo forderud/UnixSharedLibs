@@ -21,10 +21,10 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 
 Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.tecmint.com/install-multiple-glibc-libraries-linux/) explains how to build & install an old glibc version. Then, `export LD_LIBRARY_PATH=/opt/glibc-<version>/lib:$LD_LIBRARY_PATH` to explicitly build against the old glibc version.
 
-#### Benefit
-* Mostly modern build system, except for old glibc
-#### Drawback
-* TBD.
+|   | Install old glibc |
+|---|-------------------|
+| Benefit | Mostly modern build system, except for old glibc. |
+| Drawback | TBD. |
 
 
 ### Alternative 4: Static linking to libgcc/musl & libstdc++
