@@ -21,6 +21,8 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 
 Article: [Multiple glibc libraries on a single host](https://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host): Mentions `-Wl,–rpath=/usr/local/glibc-2.26/lib` and `-Wl,–dynamic-linker=/usr/local/glibc-2.26/lib/ld-linux-x86-64.so.2`
 
+[libstdc++ setup](https://gcc.gnu.org/onlinedocs/libstdc++/manual/setup.html) quote: "Building libstdc++ separately from the rest of GCC is not supported."
+
 |   | Install old glibc on new build system |
 |---|---------------------------------------|
 | Benefit | Mostly modern build system, except for old glibc. |
