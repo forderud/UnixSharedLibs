@@ -9,4 +9,4 @@ RUN apt-get update && apt-get install -y \
     libglfw3-dev \
     libssl-dev \
     libboost-dev \
-    musl-tools musl-dev \
+    musl-tools musl-dev
