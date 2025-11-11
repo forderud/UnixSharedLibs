@@ -24,7 +24,7 @@ Article: [Multiple glibc libraries on a single host](https://stackoverflow.com/q
 |   | Install old glibc on new build system |
 |---|---------------------------------------|
 | Benefit | Mostly modern build system, except for old glibc. |
-| Drawback | TBD. |
+| Drawbacks | * Need to build glibc from source.<br />  * Probably also need to build libstdc++ from source. |
 
 
 ### Alternative 4: Static linking to libgcc/musl & libstdc++
