@@ -1,9 +1,32 @@
 Test for **loading a new shared library on a system with older glibc version** than the version used to compile the library.
 
-## Static linking to libgcc & libstdc++
+### Alternative 1: Build on oldest supported system
+
+#### Benefit
+* Everything works out-of-the-box with not custom build settings required.
+#### Drawback
+* Outdated build environment. Increasingly difficult to adopt compiler and 3rd party library updates over time.
+
+
+### Alternative 2: Static linking to libgcc & libstdc++
 The `-static-libgcc` and `-static-libstdc++` linker flags are used to link to the static version of these dependent libraries. This eliminates run-time depdendencies to `libgcc_s.so` and `libstdc++.so`.
 
 You might need to install the `libstdc++-static` SW package in order to make the build succeed.
+
+#### Benefit
+* Avoid compatibility problems by making the binaries self-contained.
+#### Drawback
+* More difficult to configure. Might require also switching from glibc to the "musl" C library.
+
+
+### Alternative 3: Bundle libstdc++ and RPATH
+Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
+
+#### Benefit
+* Avoid compatibility problems by making the binary distribution self-contained.
+#### Drawback
+* Adopters might not be interested in using a custom libstdc++ library version together with the main binary.
+
 
 ## External resources
 Documentation:
@@ -27,9 +50,6 @@ Articles:
 #### Links
 * glibc releases: https://sourceware.org/glibc/wiki/Glibc%20Timeline
 * Glibc readme: https://github.com/bminor/glibc/blob/master/README (glibc 2.39 require Linux 3.2 or newer)
-
-## Alternative: Bundle libstdc++ and RPATH
-Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
 
 ## Code samples
 ### Apitrace example
