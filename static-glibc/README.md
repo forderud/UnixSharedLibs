@@ -17,6 +17,14 @@ Articles:
 * DistroWatch: https://distrowatch.com/table.php?distribution=redhat (glibc 2.28 since RHEL 8.10 and glibc 2.17 since RHEL 7.9)
 
 ### glibc
+
+#### Bundled C/C++ library versions
+| Distro       | Glibc | libstdc++ |
+|--------------|-------|-----------|
+| Ubuntu 18.04 | 2.27  | 20191114  |
+| Ubuntu 24.04 | 2.39  | 20240904  |
+
+#### Links
 * glibc releases: https://sourceware.org/glibc/wiki/Glibc%20Timeline
 * Glibc readme: https://github.com/bminor/glibc/blob/master/README (glibc 2.39 require Linux 3.2 or newer)
 
