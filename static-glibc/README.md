@@ -3,9 +3,9 @@ Test code for different approaches for building **shared libraries** that are **
 ### Alternative 1: Build on oldest supported system
 
 #### Benefit
-* No custom build settings required.
+* Simple. No custom build settings required.
 #### Drawback
-* Outdated build environment. Increasingly difficult to adopt compiler and 3rd party library updates over time.
+* Outdated build environment. Becomes increasingly difficult to adopt compiler and 3rd party library updates over time.
 
 
 ### Alternative 2: Bundle libstdc++ and RPATH
