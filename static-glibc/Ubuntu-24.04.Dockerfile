@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y \
     bzip2 \
     gawk \
     bison \
+    build-essential \
+    linux-headers-generic \
     # developer tools
     git \
     cmake \
