@@ -23,8 +23,9 @@ int compute_sum (int a, int b) {
         std::future<int> multiply = std::async(std::launch::async, [](int a, int b){
             return a * b;
         }, 3, 4);
-        
-        printf("async multiply returned %i\n", multiply.get());
+        auto val = multiply.get();
+        assert(val == 12);
+        printf("[success]\n\n");
     }
 
     printf("Forwarding computation request to mystaticlib...\n");
