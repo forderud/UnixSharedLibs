@@ -3,7 +3,7 @@
 #include <pthread.h>
 
 
-static void* thread_function(void *arg) {
+static void* thread_function(void*) {
     printf("Hello from thread!\n");
     return NULL;
 }
@@ -11,9 +11,8 @@ static void* thread_function(void *arg) {
 int main () {
     printf("executable built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
 
-    size_t job = 0;
     pthread_t thread = {};
-    pthread_create(&thread, NULL, thread_function, &job);
+    pthread_create(&thread, NULL, thread_function, NULL);
     pthread_join(thread, NULL);
 
     return 0;
