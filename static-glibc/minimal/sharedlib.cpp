@@ -1,3 +1,4 @@
+#include <cassert>
 #include <cstdint>
 #include <stdio.h>
 #include "sharedlib.hpp"
@@ -9,5 +10,6 @@ int compute_sum (int a, int b) {
 
     int sum = a + b;
     printf("sharedlib returned %i\n", sum);
+    assert(sum == 7);
     return sum;
 }
