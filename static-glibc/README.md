@@ -8,7 +8,24 @@ Test for **loading a new shared library on a system with older glibc version** t
 * Outdated build environment. Increasingly difficult to adopt compiler and 3rd party library updates over time.
 
 
-### Alternative 2: Static linking to libgcc & libstdc++
+### Alternative 2: Bundle libstdc++ and RPATH
+Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
+
+#### Benefit
+* Avoid compatibility problems by making the binary distribution self-contained.
+#### Drawback
+* Adopters might not be interested in using a custom libstdc++ library version together with the library being shared.
+
+
+### Alternative 3: Install old glibc on new build system
+
+#### Benefit
+* Mostly modern build system, except for old glibc
+#### Drawback
+* Need to use `export LD_LIBRARY_PATH=/opt/glibc-<version>:$LD_LIBRARY_PATH` to explicitly build against the old glibc version.
+
+
+### Alternative 4: Static linking to libgcc & libstdc++
 The `-static-libgcc` and `-static-libstdc++` linker flags are used to link to the static version of these dependent libraries. This eliminates run-time depdendencies to `libgcc_s.so` and `libstdc++.so`.
 
 You might need to install the `libstdc++-static` SW package in order to make the build succeed.
@@ -18,14 +35,6 @@ You might need to install the `libstdc++-static` SW package in order to make the
 #### Drawback
 * More difficult to configure. Might require also switching from glibc to the "musl" C library.
 
-
-### Alternative 3: Bundle libstdc++ and RPATH
-Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
-
-#### Benefit
-* Avoid compatibility problems by making the binary distribution self-contained.
-#### Drawback
-* Adopters might not be interested in using a custom libstdc++ library version together with the main binary.
 
 
 ## External resources
