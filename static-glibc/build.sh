@@ -1,5 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")"
+set -e # stop on first failure
 
 echo Cleaning up...
 rm -f *.o *.a *.so mainApp
