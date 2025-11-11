@@ -1,4 +1,6 @@
 #!/bin/bash
+cd "$(dirname "$0")"
+
 echo Cleaning up...
 rm -f *.o *.a *.so mainApp
 
