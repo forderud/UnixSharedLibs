@@ -9,7 +9,7 @@ int compute_sum (int a, int b) {
     printf("sharedlib built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
     printf("sharedlib built against libstdc++ %d\n", __GLIBCXX__); // was __GLIBCPP__ before 3.4.0
 
-#if 0 // enable to trigger glibc errors
+#if 1 // enable to trigger glibc errors
     {
         printf("Testing dynamic memory allocation...\n");
         std::vector<uint8_t> buffer(1024*1014, (uint8_t)0);
