@@ -11,8 +11,8 @@ Test code for different approaches for building **shared libraries** on Linux th
 ### Alternative 2: Distribute libstdc++ with library
 Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
 
-|   | Distribute libstdc++ and with library |
-|---|---------------------------------------|
+|   | Distribute libstdc++ with library |
+|---|-----------------------------------|
 | Benefit | Avoid compatibility problems by making the binary distribution self-contained. |
 | Drawback | Adopters might not be interested in setting `RPATH` to use the custom libstdc++ library together with the rest of their codebase. |
 
