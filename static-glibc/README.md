@@ -8,13 +8,13 @@ Test code for different approaches for building **shared libraries** that are **
 | Drawback | Outdated build environment. Becomes increasingly difficult to adopt compiler and 3rd party library updates over time. |
 
 
-### Alternative 2: Bundle libstdc++ and RPATH
+### Alternative 2: Bundle libstdc++
 Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
 
-#### Benefit
-* Avoid compatibility problems by making the binary distribution self-contained.
-#### Drawback
-* Adopters might not be interested in using a custom libstdc++ library version together with the library being shared.
+|   | Bundle libstdc++ |
+|---|------------------|
+| Benefit | Avoid compatibility problems by making the binary distribution self-contained. |
+| Drawback | Adopters might not be interested in setting `RPATH` to use the custom libstdc++ library together with the rest of their codebase. |
 
 
 ### Alternative 3: Install old glibc on build system
