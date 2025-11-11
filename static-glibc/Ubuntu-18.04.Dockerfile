@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 # Install build tools
 RUN apt-get update && apt-get install -y \
     wget \
+    bzip2 \
     ca-certificates \
     git \
     cmake \
