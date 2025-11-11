@@ -16,11 +16,13 @@ int main () {
 
     add_function_t add_function = NULL;
 #ifdef USE_DLOPEN
+    // use dlopen for manual library loading 
     void* module = dlopen("libmysharedlib.so", RTLD_LAZY);
     assert(module);
     add_function = (add_function_t)dlsym(module, "compute_sum");
     assert(add_function);
 #else
+    // use automatic library loading
     add_function = compute_sum;
 #endif
 
