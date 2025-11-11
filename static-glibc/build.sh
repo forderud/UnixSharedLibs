@@ -7,7 +7,7 @@ rm -f *.o *.a *.so mainApp
 # Use non-default glibc
 # export LD_LIBRARY_PATH=/usr/local/glibc-2.26/lib:$LD_LIBRARY_PATH
 #link_flags=""
-link_flags="-L /usr/local/glibc-2.26/lib -I /usr/local/glibc-2.26/include" # -Wl,–rpath=/usr/local/glibc-2.26/lib -Wl,–dynamic-linker=/usr/local/glibc-2.26/lib/ld-linux-x86-64.so.2"
+link_flags="-L/usr/local/glibc-2.26/lib -I/usr/local/glibc-2.26/include" # -Wl,-rpath=/usr/local/glibc-2.26/lib -Wl,-dynamic-linker=/usr/local/glibc-2.26/lib/ld-linux-x86-64.so.2"
 #PATH="/usr/local/glibc-2.26/lib/bin:${PATH}"
 
 # explicity set C++11 for compatibility with really old compilers that default to C++98
