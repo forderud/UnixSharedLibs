@@ -19,7 +19,7 @@ int compute_sum (int a, int b) {
     }
 
     {
-        // test std::async to introduce dependency to C++ standard library
+        printf("Testing std::async...\n");
         std::future<int> multiply = std::async(std::launch::async, [](int a, int b){
             return a * b;
         }, 3, 4);
