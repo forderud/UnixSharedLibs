@@ -3,7 +3,7 @@ FROM ubuntu:24.04
 # Install build tools
 RUN apt-get update && apt-get install -y \
     wget \
-    bzip2 \
+    bzip2 gawk bison # required for building glibc from source \
     ca-certificates \
     git \
     cmake \
