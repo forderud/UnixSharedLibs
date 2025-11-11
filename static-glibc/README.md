@@ -24,7 +24,7 @@ Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.
 #### Benefit
 * Mostly modern build system, except for old glibc
 #### Drawback
-* Need to use `export LD_LIBRARY_PATH=/opt/glibc-<version>:$LD_LIBRARY_PATH` to explicitly build against the old glibc version.
+* Need to use `export LD_LIBRARY_PATH=/opt/glibc-<version>/lib:$LD_LIBRARY_PATH` to explicitly build against the old glibc version.
 
 
 ### Alternative 4: Static linking to libgcc & libstdc++
