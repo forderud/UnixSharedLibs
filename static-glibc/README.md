@@ -11,8 +11,8 @@ Test code for different approaches for building **shared libraries** that are **
 ### Alternative 2: Bundle libstdc++
 Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
 
-|   | Bundle libstdc++ |
-|---|------------------|
+|   | Bundle libstdc++ and `RPATH` |
+|---|------------------------------|
 | Benefit | Avoid compatibility problems by making the binary distribution self-contained. |
 | Drawback | Adopters might not be interested in setting `RPATH` to use the custom libstdc++ library together with the rest of their codebase. |
 
@@ -21,8 +21,8 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 
 Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.tecmint.com/install-multiple-glibc-libraries-linux/) explains how to build & install an old glibc version. Then, `export LD_LIBRARY_PATH=/opt/glibc-<version>/lib:$LD_LIBRARY_PATH` to explicitly build against the old glibc version.
 
-|   | Install old glibc |
-|---|-------------------|
+|   | Install old glibc on build system |
+|---|-----------------------------------|
 | Benefit | Mostly modern build system, except for old glibc. |
 | Drawback | TBD. |
 
