@@ -40,6 +40,14 @@ NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https:
 | Drawbacks | * More difficult to configure build settings.<br/> * Might also require switching from glibc to the [musl](https://musl.libc.org/) C library. |
 
 
+### Alternative 5: Use clang and build libc++ against musl
+
+Idea:
+* Install `clang` compiler suite.
+* Install `musl` C library
+* Build `libc++` from source against musl
+
+
 ## External resources
 Documentation:
 * GCC [Options for Linking](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html) - covers `-static-libgcc` and `-static-libstdc++`
