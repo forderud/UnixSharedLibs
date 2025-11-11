@@ -1,4 +1,4 @@
-Test code for different approaches for building **shared libraries** that are **compatible with older glibc versions** than the version used to compile the library.
+Test code for different approaches for building **shared libraries** that are **compatible with older glibc and libstdc++ versions** than the version used to compile the library.
 
 ### Alternative 1: Build on oldest supported system
 
