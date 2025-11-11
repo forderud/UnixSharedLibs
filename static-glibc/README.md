@@ -39,6 +39,7 @@ NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https:
 | Benefit | Avoid compatibility problems by making the binaries self-contained. |
 | Drawbacks | * More difficult to configure build settings.<br/> * Might also require switching from glibc to the [musl](https://musl.libc.org/) C library. |
 
+Project: [musl-cross-make](https://github.com/richfelker/musl-cross-make/): Automates building of GCC & musl.
 
 ### Alternative 5: Use clang and build libc++ against musl
 
