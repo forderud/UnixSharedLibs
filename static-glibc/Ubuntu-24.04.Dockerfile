@@ -23,3 +23,12 @@ RUN apt-get update && apt-get install -y \
 COPY gehealthcarerootca1.crt gehealthcarerootca2.crt /usr/local/share/ca-certificates
 RUN update-ca-certificates
 
+# Install old glibc 2.26
+WORKDIR /tmp
+RUN wget https://ftp.gnu.org/gnu/glibc/glibc-2.26.tar.bz2 \
+  && tar -xvf glibc-2.26.tar.bz2 \
+  && mkdir glibc-2.26/build \
+  && cd glibc-2.26/build \
+  && ../configure --disable-werror --prefix=/usr/local/glibc-2.26 \
+  && make -j4 \
+  && make install
