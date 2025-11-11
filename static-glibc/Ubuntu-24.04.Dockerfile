@@ -2,9 +2,13 @@ FROM ubuntu:24.04
 
 # Install build tools
 RUN apt-get update && apt-get install -y \
-    wget \
-    bzip2 gawk bison # required for building glibc from source \
+    # required for building glibc from source
     ca-certificates \
+    wget \
+    bzip2 \
+    gawk \
+    bison \
+    # developer tools
     git \
     cmake \
     g++ \
