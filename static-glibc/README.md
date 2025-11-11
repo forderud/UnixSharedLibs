@@ -32,11 +32,11 @@ The `-static-libgcc` and `-static-libstdc++` linker flags are used to link to th
 
 NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https://packages.fedoraproject.org/pkgs/gcc/libstdc++-static/) package.
 
-#### Benefit
-* Avoid compatibility problems by making the binaries self-contained.
-#### Drawback
-* More difficult to configure build settings.
-* Might also require switching from glibc to the [musl](https://musl.libc.org/) C library.
+|  | Static linking to libgcc/musl & libstdc++ |
+|--|-------------------------------------------|
+| Benefit | Avoid compatibility problems by making the binaries self-contained. |
+| Drawback | * More difficult to configure build settings.
+             * Might also require switching from glibc to the [musl](https://musl.libc.org/) C library. |
 
 
 ## External resources
