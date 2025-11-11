@@ -19,7 +19,7 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 
 ### Alternative 3: Install old glibc on new build system
 
-Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.tecmint.com/install-multiple-glibc-libraries-linux/) explains how to build & install an old glibc version. Then, `export LD_LIBRARY_PATH=/opt/glibc-<version>/lib:$LD_LIBRARY_PATH` to explicitly build against the old glibc version.
+Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.tecmint.com/install-multiple-glibc-libraries-linux/) explains how to build & install an old glibc version. Then, `export LD_LIBRARY_PATH=/usr/local/glibc-<version>/lib:$LD_LIBRARY_PATH` to explicitly build against the old glibc version.
 
 |   | Install old glibc on new build system |
 |---|---------------------------------------|
