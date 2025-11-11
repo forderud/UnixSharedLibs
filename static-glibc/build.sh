@@ -14,7 +14,7 @@ link_flags="-L/usr/local/glibc-2.26/lib -I/usr/local/glibc-2.26/include -Wl,-rpa
 compile_flags="-std=c++11 -fPIC"
 
 echo ""
-echo Building static lib...
+echo Building static C++ lib...
 g++ $compile_flags -c mystaticlib.cpp -o mystaticlib.o
 ar rcs libmystaticlib.a mystaticlib.o
 
@@ -22,7 +22,7 @@ ar rcs libmystaticlib.a mystaticlib.o
 #nm libmystaticlib.a
 
 echo ""
-echo Building shared lib...
+echo Building shared C++ lib...
 g++ $compile_flags -c mysharedlib.cpp -o mysharedlib.o
 sharedlib_flags="-Wl,-Bsymbolic -Wl,-Bsymbolic-functions" # TODO: Learn how to use these flags
 g++ $link_flags -shared -static-libgcc -static-libstdc++ -Wl,--version-script=mysharedlib.vers $sharedlib_flags -pthread mysharedlib.o libmystaticlib.a -o libmysharedlib.so
@@ -32,7 +32,7 @@ ldd libmysharedlib.so
 echo Direct shared lib. dependencies:
 readelf -d libmysharedlib.so
 
-echo Building application...
+echo Building C++ application...
 # Optional define: -DUSE_DLOPEN
 g++ $link_flags main.cpp -L. -ldl -lmysharedlib -o mainApp
 
