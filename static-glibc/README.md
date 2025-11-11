@@ -19,8 +19,6 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 
 ### Alternative 3: Install old glibc on new build system
 
-Article: [How to Install and Run Multiple glibc Libraries in Linux](https://www.tecmint.com/install-multiple-glibc-libraries-linux/) explains how to build & install an old glibc version. Then, `export LD_LIBRARY_PATH=/usr/local/glibc-<version>/lib:$LD_LIBRARY_PATH` to explicitly build against the old glibc version.
-
 Article: [Multiple glibc libraries on a single host](https://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host): Mentions `-Wl,–rpath=/usr/local/glibc-2.26/lib` and `-Wl,–dynamic-linker=/usr/local/glibc-2.26/lib/ld-linux-x86-64.so.2`
 
 |   | Install old glibc on new build system |
