@@ -4,7 +4,7 @@ Test code for different approaches for building **shared libraries** that are **
 
 |   | Build on oldest supported system |
 |---|----------------------------------|
-| Benefit | Simple. No custom build settings required. |
+| Benefit | * Simple and low risk.<br/> * No custom build settings required. |
 | Drawback | Outdated build environment. Becomes increasingly difficult to adopt compiler and 3rd party library updates over time. |
 
 
@@ -35,7 +35,7 @@ NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https:
 |  | Static linking to libgcc/musl & libstdc++ |
 |--|-------------------------------------------|
 | Benefit | Avoid compatibility problems by making the binaries self-contained. |
-| Drawback | * More difficult to configure build settings. <br/> * Might also require switching from glibc to the [musl](https://musl.libc.org/) C library. |
+| Drawback | * More difficult to configure build settings.<br/> * Might also require switching from glibc to the [musl](https://musl.libc.org/) C library. |
 
 
 ## External resources
