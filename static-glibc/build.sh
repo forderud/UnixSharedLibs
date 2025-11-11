@@ -19,7 +19,7 @@ echo ""
 echo Building shared lib...
 g++ $compile_flags -c mysharedlib.cpp -o mysharedlib.o
 sharedlib_flags="-Wl,-Bsymbolic -Wl,-Bsymbolic-functions" # TODO: Learn how to use these flags
-g++ -shared -static-libgcc -static-libstdc++ -Wl,--version-script=mysharedlib.vers $sharedlib_flags mysharedlib.o libmystaticlib.a -o libmysharedlib.so
+g++ -shared -static-libgcc -static-libstdc++ -Wl,--version-script=mysharedlib.vers $sharedlib_flags -pthread mysharedlib.o libmystaticlib.a -o libmysharedlib.so
 
 echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
