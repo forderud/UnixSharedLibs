@@ -9,8 +9,11 @@ rm -f *.o *.a *.so mainApp
 link_flags=""
 link_flags="-L/usr/local/glibc-2.26/lib -I/usr/local/glibc-2.26/include -Wl,-rpath=/usr/local/glibc-2.26/lib -Wl,-dynamic-linker=/usr/local/glibc-2.26/lib/ld-linux-x86-64.so.2"
 
+compile_flags=""
+#compile_flags="$compile_flags -isystem /usr/local/glibc-2.26/include"
+
 echo Building shared C library..
-g++ -shared $link_flags sharedlib.cpp -L. -o libsharedLib.so
+g++ -shared $compile_flags $link_flags sharedlib.cpp -L. -o libsharedLib.so
 
 echo Transitive shared lib. dependencies:
 ldd libsharedlib.so
