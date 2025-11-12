@@ -15,6 +15,7 @@ echo Direct shared lib. dependencies:
 readelf -d libsharedlib.so
 
 echo Building C application...
+# Replace musl-gcc with gcc to trigger "invalid ELF header" crash
 musl-gcc main.c -L. -pthread -lsharedlib -o mainApp
 
 echo ""
