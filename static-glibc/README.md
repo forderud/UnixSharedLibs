@@ -55,6 +55,7 @@ Documentation:
 * GNU binutils [LD](https://sourceware.org/binutils/docs/ld.html) doc - covers `-Bsymbolic` and `-Bsymbolic-functions`
 
 Articles:
+* musl [Functional differences from glibc](https://wiki.musl-libc.org/functional-differences-from-glibc) - `dlclose` not implemented
 * [Statically linking libstdc++](https://codearcana.com/posts/2015/12/09/statically-linking-libstdc.html) - also mentions `-Bsymbolic-functions`
 * [Linux binary compatibility explained at 5 levels of difficulty](https://ruvi-d.medium.com/linux-binary-compatibility-explained-at-5-levels-of-difficulty-ffeab6235fc8)
 
