@@ -37,9 +37,7 @@ NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https:
 |  | Static linking to libgcc & libstdc++ |
 |--|-------------------------------------------|
 | Benefit | Avoid compatibility problems by making the binaries self-contained. |
-| Drawbacks | * More difficult to configure build settings.<br/> * Might also require switching from glibc to the [musl](https://musl.libc.org/) C library. |
-
-Project: [musl-cross-make](https://github.com/richfelker/musl-cross-make/): Automates building of GCC & musl.
+| Drawback | More difficult to configure build settings. |
 
 ### ~~Alternative 5: Use clang and build libc++ against musl~~
 
@@ -47,6 +45,8 @@ Idea:
 * Install `clang` compiler suite.
 * Install `musl` C library
 * Build `libc++` from source against musl
+
+Project: [musl-cross-make](https://github.com/richfelker/musl-cross-make/): Automates building of GCC & musl.
 
 **WARNING**: Acording to [Safe to load musl shared lib into glibc executable?](https://www.openwall.com/lists/musl/2025/11/12/6) then it's not supported to link statically to musl when buliding a shared lib. 
 
