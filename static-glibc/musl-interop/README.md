@@ -49,5 +49,6 @@ The following error is observed if forgetting to add musl to `LD_LIBRARY_PATH`:
 ```
 
 ## Links
+* musl [Functional differences from glibc](https://wiki.musl-libc.org/functional-differences-from-glibc) - `dlclose` not implemented
 * musl mailing list: [Safe to load musl shared lib into glibc executable?](https://www.openwall.com/lists/musl/2025/11/12/5)
 * [Load both musl libc.so and gcc libc.so in the same process?](https://stackoverflow.com/questions/30151808/load-both-musl-libc-so-and-gcc-libc-so-in-the-same-process): One answer claims that it's possible and one that it's unsupported. Therefore, need to investigate further.
