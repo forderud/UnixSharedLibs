@@ -48,7 +48,7 @@ Idea:
 
 Project: [musl-cross-make](https://github.com/richfelker/musl-cross-make/): Automates building of GCC & musl.
 
-**WARNING**: Acording to [Safe to load musl shared lib into glibc executable?](https://www.openwall.com/lists/musl/2025/11/12/6) then it's not supported to link statically to musl when buliding a shared lib. 
+**WARNING**: Acording to [Safe to load musl shared lib into glibc executable?](https://www.openwall.com/lists/musl/2025/11/12/6) then it's _not_ supported to link statically to musl when buliding a shared lib. 
 
 ## External resources
 Documentation:

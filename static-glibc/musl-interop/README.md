@@ -1,6 +1,6 @@
 Test for calling a shared lib (`.so`) using the "musl" C library from a executable using the "glibc" C library.
 
-**WARNING**: Acording to [Safe to load musl shared lib into glibc executable?](https://www.openwall.com/lists/musl/2025/11/12/6) then it's not supported to link statically to musl when buliding a shared lib. 
+**WARNING**: Acording to [Safe to load musl shared lib into glibc executable?](https://www.openwall.com/lists/musl/2025/11/12/6) then it's _not_ supported to link statically to musl when buliding a shared lib. 
 
 ## Musl binaries on Ubuntu
 ```
