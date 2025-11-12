@@ -2,22 +2,20 @@
 cd "$(dirname "$0")"
 set -e # stop on first failure
 
+# Using "musl-gcc" instead of "gcc" to use the musl C library instead of glibc
+# Musl seem to be incompatible with "ldd", so it cannot be used for analyzing dependencies
+
 echo Cleaning up...
 rm -f *.o *.a *.so mainApp
 
 echo Building shared C library..
-gcc -shared sharedlib.c -o libsharedLib.so
+musl-gcc -shared sharedlib.c -o libsharedLib.so
 
-echo Transitive shared lib. dependencies:
-ldd libsharedlib.so
 echo Direct shared lib. dependencies:
 readelf -d libsharedlib.so
 
 echo Building C application...
-gcc main.c -L. -pthread -lsharedlib -o mainApp
-
-echo mainApp dependencies:
-ldd mainApp
+musl-gcc main.c -L. -pthread -lsharedlib -o mainApp
 
 echo ""
 echo Running C application...
