@@ -1,10 +1,5 @@
 Test for calling a shared lib (`.so`) using the "musl" C library from a executable using the "glibc" C library.
 
-#### Observed behavior
-```
-./mainApp: error while loading shared libraries: /lib/x86_64-linux-gnu/libc.so: invalid ELF header
-```
-
 
 ## Musl binaries on Ubuntu
 ```
@@ -39,4 +34,4 @@ drwxr-xr-x 1 root root    4096 Nov 11 17:39 ..
 
 
 ## Links
-* [Load both musl libc.so and gcc libc.so in the same process?](https://stackoverflow.com/questions/30151808/load-both-musl-libc-so-and-gcc-libc-so-in-the-same-process): Claims that it's not supported
+* [Load both musl libc.so and gcc libc.so in the same process?](https://stackoverflow.com/questions/30151808/load-both-musl-libc-so-and-gcc-libc-so-in-the-same-process): Claims that it's not supported. Still, this sample proves that it can work.

@@ -9,14 +9,18 @@ echo Cleaning up...
 rm -f *.o *.a *.so mainApp
 
 echo Building shared C library..
+# Use musl in shared library
 musl-gcc -shared sharedlib.c -o libsharedLib.so
 
 echo Direct shared lib. dependencies:
 readelf -d libsharedlib.so
 
+# Add musl to LD_LIBRARY_PATH to avoid "invalid ELF header" errors when combining glibc with musl in the same process 
+export LD_LIBRARY_PATH=/lib/x86_64-linux-musl:$LD_LIBRARY_PATH # required for glibc/musl interop
+
 echo Building C application...
-# Replace musl-gcc with gcc to trigger "invalid ELF header" crash
-musl-gcc main.c -L. -pthread -lsharedlib -o mainApp
+# Use glibc in executable to test interop with shared lib. using musl
+gcc main.c -L. -pthread -lsharedlib -o mainApp
 
 echo ""
 echo Running C application...
