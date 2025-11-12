@@ -41,6 +41,11 @@ Warnings when building a non-musl application using `gcc` with musl in `LD_LIBRA
 /usr/bin/ld: /lib/x86_64-linux-musl/libc.so: warning: the use of `tempnam' is dangerous, better use `mkstemp'
 ```
 
+### Error if musl is _not_ in `LD_LIBRARY_PATH`
+The following error is observed if forgetting to add musl to `LD_LIBRARY_PATH`:
+```
+./mainApp: error while loading shared libraries: /lib/x86_64-linux-gnu/libc.so: invalid ELF header
+```
 
 ## Links
 * [Load both musl libc.so and gcc libc.so in the same process?](https://stackoverflow.com/questions/30151808/load-both-musl-libc-so-and-gcc-libc-so-in-the-same-process): One answer claims that it's possible and one that it's unsupported. Therefore, need to investigate further.
