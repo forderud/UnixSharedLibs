@@ -36,3 +36,7 @@ drwxr-xr-x 1 root root    4096 Nov 11 17:39 ..
 -rw-r--r-- 1 root root     757 Nov 10  2023 musl-gcc.specs
 -rw-r--r-- 1 root root   12696 Nov 10  2023 rcrt1.o
 ```
+
+
+## Links
+* [Load both musl libc.so and gcc libc.so in the same process?](https://stackoverflow.com/questions/30151808/load-both-musl-libc-so-and-gcc-libc-so-in-the-same-process): Claims that it's not supported
