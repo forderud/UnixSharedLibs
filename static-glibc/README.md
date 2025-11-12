@@ -29,25 +29,26 @@ Article: [Multiple glibc libraries on a single host](https://stackoverflow.com/q
 | Drawbacks | * Need to build glibc from source.<br />  * Also need to build libstdc++ from source. |
 
 
-### Alternative 4: Static linking to libgcc/musl & libstdc++
-The `-static-libgcc` and `-static-libstdc++` linker flags are used to link to the static version of these dependent libraries. This eliminates run-time depdendencies to `libgcc_s.so` and `libstdc++.so`.
+### Alternative 4: Static linking to libgcc & libstdc++
+The `-static-libgcc` and `-static-libstdc++` linker flags are used to link to the static version of these dependent libraries. This eliminates run-time depdendencies to `libgcc_s.so` and `libstdc++.so`, but not to `glibc` that implements malloc/free.
 
 NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https://packages.fedoraproject.org/pkgs/gcc/libstdc++-static/) package.
 
-|  | Static linking to libgcc/musl & libstdc++ |
+|  | Static linking to libgcc & libstdc++ |
 |--|-------------------------------------------|
 | Benefit | Avoid compatibility problems by making the binaries self-contained. |
 | Drawbacks | * More difficult to configure build settings.<br/> * Might also require switching from glibc to the [musl](https://musl.libc.org/) C library. |
 
 Project: [musl-cross-make](https://github.com/richfelker/musl-cross-make/): Automates building of GCC & musl.
 
-### Alternative 5: Use clang and build libc++ against musl
+### ~~Alternative 5: Use clang and build libc++ against musl~~
 
 Idea:
 * Install `clang` compiler suite.
 * Install `musl` C library
 * Build `libc++` from source against musl
 
+**WARNING**: Acording to [Safe to load musl shared lib into glibc executable?](https://www.openwall.com/lists/musl/2025/11/12/6) then it's not supported to link statically to musl when buliding a shared lib. 
 
 ## External resources
 Documentation:
