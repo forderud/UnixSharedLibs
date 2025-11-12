@@ -8,7 +8,7 @@ static void* thread_function(void*) {
 }
 
 int main () {
-    printf("executable built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
+    //printf("executable built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
 
     printf("Calling compute_sum...\n");
     int sum = compute_sum(3, 4);

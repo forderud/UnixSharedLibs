@@ -6,7 +6,7 @@ echo Cleaning up...
 rm -f *.o *.a *.so mainApp
 
 echo Building shared C library..
-gcc -shared -static-libgcc -static-libstdc++ sharedlib.c -L. -o libsharedLib.so
+gcc -shared sharedlib.c -o libsharedLib.so
 
 echo Transitive shared lib. dependencies:
 ldd libsharedlib.so
