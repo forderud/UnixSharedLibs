@@ -32,6 +32,15 @@ drwxr-xr-x 1 root root    4096 Nov 11 17:39 ..
 -rw-r--r-- 1 root root   12696 Nov 10  2023 rcrt1.o
 ```
 
+### Observed warnings
+Warnings when building a non-musl application using `gcc` with musl in `LD_LIBRARY_PATH`:
+```
+/usr/bin/ld: /lib/x86_64-linux-musl/libc.so: warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+/usr/bin/ld: /lib/x86_64-linux-musl/libc.so: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+/usr/bin/ld: /lib/x86_64-linux-musl/libc.so: warning: the `gets' function is dangerous and should not be used.
+/usr/bin/ld: /lib/x86_64-linux-musl/libc.so: warning: the use of `tempnam' is dangerous, better use `mkstemp'
+```
+
 
 ## Links
 * [Load both musl libc.so and gcc libc.so in the same process?](https://stackoverflow.com/questions/30151808/load-both-musl-libc-so-and-gcc-libc-so-in-the-same-process): One answer claims that it's possible and one that it's unsupported. Therefore, need to investigate further.
