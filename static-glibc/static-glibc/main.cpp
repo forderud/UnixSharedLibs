@@ -14,20 +14,21 @@ int main () {
     printf("executable built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
     printf("executable built against libstdc++ %d\n", __GLIBCXX__); // was __GLIBCPP__ before 3.4.0
 
-    add_function_t add_function = NULL;
+    {
+        add_function_t add_function = NULL;
 #ifdef USE_DLOPEN
-    // use dlopen for manual library loading 
-    void* module = dlopen("libmysharedlib.so", RTLD_LAZY);
-    assert(module);
-    add_function = (add_function_t)dlsym(module, "compute_sum");
-    assert(add_function);
+        // use dlopen for manual library loading 
+        void* module = dlopen("libmysharedlib.so", RTLD_LAZY);
+        assert(module);
+        add_function = (add_function_t)dlsym(module, "compute_sum");
+        assert(add_function);
 #else
-    // use automatic library loading
-    add_function = compute_sum;
+        // use automatic library loading
+        add_function = compute_sum;
 #endif
-
-    int sum = add_function(3, 4);
-    printf("Return-value %i\n", sum);
+        int sum = add_function(3, 4);
+        printf("Return-value %i\n", sum);
+    }
 
     return 0;
 }
