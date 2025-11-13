@@ -1,5 +1,6 @@
 #include <future>
 
 void foo() {
-    auto m_result = std::async(std::launch::async, [](){});
+    printf("Calling std::async from shared lib...\n");
+    auto result = std::async(std::launch::async, [](){});
 }

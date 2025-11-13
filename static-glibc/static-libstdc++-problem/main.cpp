@@ -3,6 +3,9 @@
 extern void foo();
 
 int main() {
-    auto m_result = std::async(std::launch::async, [](){});
+    printf("Calling std::async from executable.\n");
+    auto result = std::async(std::launch::async, [](){});
+
+    printf("Calling shared lib...\n");
     foo();
 }
