@@ -13,5 +13,5 @@ g++ main.cpp -L. -lfoo -Wl,-rpath=. -pthread -O2
 
 
 echo ""
-echo Running application...
+echo "Running application that will segfault on startup..."
 ./a.out
