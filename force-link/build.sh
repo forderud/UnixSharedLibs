@@ -11,13 +11,12 @@ g++ -shared -o libmylib.so mylib.o
 
 echo Building mainApp...
 echo "Using -Wl,--no-as-needed to force-link"
-g++ main.cpp -L. -Wl,--no-as-needed -lmylib -o mainApp
+g++ main.cpp -L. -Wl,--no-as-needed -lmylib -Wl,-rpath=. -o mainApp
 
 #echo mainApp dependencies:
 #ldd mainApp
 
 echo ""
 echo Running mainApp:
-export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ./mainApp
 
