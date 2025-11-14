@@ -15,5 +15,5 @@ g++ main.cpp -L. -lfoo -Wl,-rpath=. -pthread -O2
 
 
 echo ""
-echo "Running application (will segfault)..."
+echo "Running application (will segfault):"
 ./a.out
