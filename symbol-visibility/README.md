@@ -9,3 +9,4 @@ Experiments with static linking of the C++ standard library and other dependenci
 * GCC [Options Controlling C++ Dialect](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Dialect-Options.html) - covers `-fvisibility-inlines-hidden`
 * GCC [Symbol Visibility](https://gcc.gnu.org/wiki/Visibility) wiki
 * GCC [Options for Linking](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html) - covers `-static-libgcc` and `-static-libstdc++`
+* GNU binutils [LD](https://sourceware.org/binutils/docs/ld.html) - covers `--exclude-libs`
