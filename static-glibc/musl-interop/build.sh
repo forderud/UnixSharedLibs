@@ -24,5 +24,4 @@ gcc main.c -L. -pthread -lsharedlib -o mainApp
 
 echo ""
 echo Running C application...
-export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ./mainApp
