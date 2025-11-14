@@ -7,7 +7,7 @@ rm -f *.so a.out
 
 echo "Building shared lib..."
 # Link to static libstdc++ to avoid run-time dependency.
-# Use --exclude-libs,ALL to avoid exporting symbols from external libraries, like libstdc++
+# Use --exclude-libs,ALL to avoid exporting symbols from  libstdc++ and other dependent libraries
 g++ -fPIC -static-libstdc++ -shared libfoo.cpp -o libfoo.so -Wl,--exclude-libs,ALL -pthread
 
 echo "Building app that links to shared lib..."
