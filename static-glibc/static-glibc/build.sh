@@ -26,12 +26,11 @@ readelf -d libmysharedlib.so
 
 echo Building C++ application...
 # Optional define: -DUSE_DLOPEN
-g++ main.cpp -L. -ldl -lmysharedlib -o mainApp
+g++ main.cpp -L. -ldl -lmysharedlib -Wl,-rpath=. -o mainApp
 
 #echo mainApp dependencies:
 #ldd mainApp
 
 echo ""
 echo Running application...
-export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ./mainApp
