@@ -12,7 +12,7 @@ typedef int (*add_function_t)(int a ,int b);
 
 int main () {
     printf("executable built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
-    printf("executable built against libstdc++ %d\n", __GLIBCXX__); // was __GLIBCPP__ before 3.4.0
+    printf("executable built against libstdc++ %d\n", _GLIBCXX_RELEASE);
 
     {
         add_function_t add_function = NULL;

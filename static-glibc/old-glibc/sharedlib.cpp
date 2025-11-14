@@ -7,7 +7,7 @@
 
 int compute_sum (int a, int b) {
     printf("sharedlib built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
-    printf("sharedlib built against libstdc++ %d\n", __GLIBCXX__); // was __GLIBCPP__ before 3.4.0
+    printf("sharedlib built against libstdc++ %d\n", _GLIBCXX_RELEASE);
 
 #if 1 // enable to trigger glibc errors
     {

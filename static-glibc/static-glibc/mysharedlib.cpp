@@ -9,7 +9,7 @@
 
 int compute_sum (int a, int b) {
     printf("mysharedlib built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);
-    printf("mysharedlib built against libstdc++ %d\n", __GLIBCXX__); // was __GLIBCPP__ before 3.4.0
+    printf("mysharedlib built against libstdc++ %d\n", _GLIBCXX_RELEASE);
 
     {
         printf("Testing dynamic memory allocation...\n");
