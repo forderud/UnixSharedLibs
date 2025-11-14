@@ -28,12 +28,11 @@ echo shared lib. exports:
 readelf --symbols --use-dynamic --demangle --wide libmysharedlib.so 
 
 echo Building application...
-g++ main.cpp -L. -lmysharedlib -o mainApp
+g++ main.cpp -L. -lmysharedlib -Wl,-rpath=. -o mainApp
 
 #echo mainApp dependencies:
 #ldd mainApp
 
 echo ""
 echo Running application...
-export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ./mainApp
