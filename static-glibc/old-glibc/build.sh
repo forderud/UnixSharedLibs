@@ -21,12 +21,11 @@ echo Direct shared lib. dependencies:
 readelf -d libsharedlib.so
 
 echo Building C application...
-g++ $link_flags main.cpp -L. -pthread -lsharedlib -o mainApp
+g++ $link_flags main.cpp -L. -pthread -lsharedlib -Wl,-rpath=. -o mainApp
 
 echo mainApp dependencies:
 ldd mainApp
 
 echo ""
 echo Running C application...
-export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ./mainApp
