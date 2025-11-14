@@ -7,7 +7,7 @@ rm -f *.o *.a *.so mainApp
 
 echo ""
 echo Building static C++ lib...
-g++ -c mystaticlib.cpp -o mystaticlib.o
+g++ -fPIC -c mystaticlib.cpp -o mystaticlib.o
 ar rcs libmystaticlib.a mystaticlib.o
 
 #echo libmystaticlib.a imports:
