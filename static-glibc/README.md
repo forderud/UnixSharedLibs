@@ -39,7 +39,7 @@ NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https:
 | Benefit | Avoid compatibility problems by making the binaries self-contained. |
 | Drawback | More difficult to configure build settings. |
 
-**WARNING**: According to *Safe to link to static libstdc++ from shared library?* [response 1](https://gcc.gnu.org/pipermail/libstdc++/2025-November/064342.html) and [response 2](https://gcc.gnu.org/pipermail/libstdc++/2025-November/064347.html) then it's not possible to fully encapsulate libstdc++ usage inside a shared library.
+**WARNING**: According to *Safe to link to static libstdc++ from shared library?* [response 1](https://gcc.gnu.org/pipermail/libstdc++/2025-November/064342.html) and [response 2](https://gcc.gnu.org/pipermail/libstdc++/2025-November/064347.html) then it's _not_ possible to fully encapsulate libstdc++ usage inside a shared library.
 
 ### ~~Alternative 5: Use clang and build libc++ against musl~~
 
