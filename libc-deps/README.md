@@ -8,7 +8,7 @@ Test code for different approaches for building **shared libraries** on Linux th
 | Drawback | Outdated build environment. Becomes increasingly difficult to adopt compiler and 3rd party library updates over time. |
 
 
-### Alternative 2: Distribute libstdc++ with library
+### Alternative 2: Distribute new libstdc++ with library
 Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
 
 |   | Distribute libstdc++ with library |
