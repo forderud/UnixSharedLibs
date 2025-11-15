@@ -4,6 +4,8 @@ Reproducer for problem with `-static-libstdc++` in shared libraries
 
 **PROBLEM**: Segfault if combining `-static-libstdc++` with `-Wl,--exclude-libs,ALL` in shared library. Unsure if this is due to a bug or inherent limitation in libstdc++.
 
+**WARNING**: According to *Safe to link to static libstdc++ from shared library?* [response 1](https://gcc.gnu.org/pipermail/libstdc++/2025-November/064342.html) and [response 2](https://gcc.gnu.org/pipermail/libstdc++/2025-November/064347.html) then it's not possible to fully encapsulate libstdc++ usage inside a shared library.
+
 ## External resources
 Documentation:
 * GCC [Options for Linking](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html) - documents `-static-libstdc++`
