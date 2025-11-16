@@ -2,7 +2,7 @@ Attempt on bundling new C/C++ libs with a shared library to allow it to run on o
 
 Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
 
-### Problem observed when trying to copy C/C++ libs to old distro
+### Problem observed when trying use bundled C/C++ libs
 ```
 libc.so.6 dependencies:
 /bin/bash: relocation error: /host/bundle-deps/libc.so.6: symbol _dl_audit_symbind_alt version GLIBC_PRIVATE not defined in file ld-linux-x86-64.so.2 with link time reference
