@@ -11,7 +11,7 @@ libc.so.6 dependencies:
 ### Dependencies on Ubuntu 24:04
 ```
 Transitive shared lib. dependencies:
-        linux-vdso.so.1 (0x00007ffc5f73e000)
+        linux-vdso.so.1
         libstdc++.so.6 => /host/bundle-deps/libstdc++.so.6
         libgcc_s.so.1 => /host/bundle-deps/libgcc_s.so.1
         libc.so.6 => /host/bundle-deps/libc.so.6
