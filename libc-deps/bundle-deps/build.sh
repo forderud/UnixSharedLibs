@@ -8,7 +8,7 @@ rm -f *.o *.so a.out
 echo ""
 echo Building shared C++ lib...
 g++ -fPIC -c mysharedlib.cpp -o mysharedlib.o
-g++ -shared -static-libgcc -pthread mysharedlib.o -o libmysharedlib.so
+g++ -shared -pthread mysharedlib.o -o libmysharedlib.so
 
 echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
