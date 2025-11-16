@@ -16,6 +16,8 @@ cp /lib/x86_64-linux-gnu/libstdc++.so.6 /lib/x86_64-linux-gnu/libgcc_s.so.1 /lib
 # Add current dir to library search path
 export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
 
+echo libgcc_s.so.1 dependencies:
+ldd libgcc_s.so.1
 echo libc.so.6 dependencies:
 ldd libc.so.6
 echo libstdc++.so.6 dependencies:
