@@ -19,6 +19,9 @@ readelf -d libmysharedlib.so
 cp /lib/x86_64-linux-gnu/libstdc++.so.6 .
 cp /lib/x86_64-linux-gnu/libc.so.6 .
 
+# Add current dir to library search path
+export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
+
 echo libstdc++.so.6 dependencies:
 ldd libstdc++.so.6
 
@@ -31,5 +34,4 @@ g++ main.cpp -L. -ldl -lstdc++ -lmysharedlib -Wl,-rpath=.
 
 echo ""
 echo Running application...
-export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
 ./a.out
