@@ -3,7 +3,7 @@ cd "$(dirname "$0")"
 set -e # stop on first failure
 
 echo Cleaning up...
-rm -f *.o *.a *.so mainApp
+rm -f *.o *.a *.so a.out
 
 echo ""
 echo Building static C++ lib...
@@ -26,11 +26,11 @@ readelf -d libmysharedlib.so
 
 echo Building C++ application...
 # Optional define: -DUSE_DLOPEN
-g++ main.cpp -L. -ldl -lmysharedlib -Wl,-rpath=. -o mainApp
+g++ main.cpp -L. -ldl -lmysharedlib -Wl,-rpath=.
 
-#echo mainApp dependencies:
-#ldd mainApp
+#echo executable dependencies:
+#ldd a.out
 
 echo ""
 echo Running application...
-./mainApp
+./a.out
