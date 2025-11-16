@@ -12,7 +12,9 @@ g++ -shared -pthread mysharedlib.o -o libmysharedlib.so
 
 # copy libstdc++ library to current folder
 cp /lib/x86_64-linux-gnu/libstdc++.so.6 .
+cp /lib/x86_64-linux-gnu/libgcc_s.so.1 .
 cp /lib/x86_64-linux-gnu/libc.so.6 .
+cp /lib64/ld-linux-x86-64.so.2 .
 
 # Add current dir to library search path
 export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
