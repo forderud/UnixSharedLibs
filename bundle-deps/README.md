@@ -37,3 +37,6 @@ libc.so.6 dependencies:
 ld-linux-x86-64.so.2 dependencies:
         statically linked
 ```
+
+## Links
+* [Multiple glibc libraries on a single host](https://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host) - mentions `-Wl,--rpath` and ` -Wl,--dynamic-linker`
