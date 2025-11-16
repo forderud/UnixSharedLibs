@@ -28,7 +28,6 @@ ldd libmysharedlib.so
 #readelf -d libmysharedlib.so
 
 echo Building C++ application...
-# Optional define: -DUSE_DLOPEN
 g++ main.cpp -L. -ldl -lstdc++ -lmysharedlib -Wl,-rpath=.
 
 #echo executable dependencies:
