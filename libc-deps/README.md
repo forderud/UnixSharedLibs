@@ -1,4 +1,4 @@
-Test code for different approaches for building **shared libraries** on Linux that are **compatible with a wide range of distributions and versions**, including glibc and libstdc++ versions older than the version used to compile the library.
+Test code for different approaches for building **shared libraries** on Linux that are **compatible with a wide range of distributions and versions**, including >5 year old glibc and libstdc++ versions.
 
 ### Alternative 1: Build on oldest supported system
 
