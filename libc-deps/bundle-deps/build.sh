@@ -17,13 +17,13 @@ cp /lib/x86_64-linux-gnu/libc.so.6 .
 # Add current dir to library search path
 export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
 
+echo libstdc++.so.6 dependencies:
+ldd libstdc++.so.6
+
 echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
 #echo Direct shared lib. dependencies:
 #readelf -d libmysharedlib.so
-
-echo libstdc++.so.6 dependencies:
-ldd libstdc++.so.6
 
 echo Building C++ application...
 # Optional define: -DUSE_DLOPEN
