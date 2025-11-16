@@ -8,7 +8,7 @@ rm -f *.o *.so a.out
 echo ""
 echo Building shared C++ lib...
 g++ -fPIC -c mysharedlib.cpp -o mysharedlib.o
-g++ -shared -pthread mysharedlib.o -o libmysharedlib.so
+g++ -shared -pthread mysharedlib.o -Wl,-rpath=. -o libmysharedlib.so
 
 echo Copying C/C++ library dependencies to current folder...
 cp /lib/x86_64-linux-gnu/libstdc++.so.6 /lib/x86_64-linux-gnu/libgcc_s.so.1 /lib/x86_64-linux-gnu/libc.so.6 /lib64/ld-linux-x86-64.so.2 .
