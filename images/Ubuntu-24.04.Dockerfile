@@ -32,3 +32,5 @@ RUN wget https://ftp.gnu.org/gnu/glibc/glibc-2.26.tar.bz2 \
   && ../configure --disable-werror --prefix=/usr/local/glibc-2.26 \
   && make -j4 \
   && make install
+
+# TODO: Build & install new gcc/g++ against old glibc
