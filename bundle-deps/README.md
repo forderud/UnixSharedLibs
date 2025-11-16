@@ -1,3 +1,7 @@
+Attempt on bundling new C/C++ libs with a shared library to allow it to run on older Linux distros.
+
+Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
+
 ### Problem observed when trying to copy C/C++ libs to old distro
 ```
 libc.so.6 dependencies:
