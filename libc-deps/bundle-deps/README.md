@@ -23,4 +23,7 @@ libgcc_s.so.1 dependencies:
 libc.so.6 dependencies:
         /lib64/ld-linux-x86-64.so.2
         linux-vdso.so.1
+
+ld-linux-x86-64.so.2 dependencies:
+        statically linked
 ```
