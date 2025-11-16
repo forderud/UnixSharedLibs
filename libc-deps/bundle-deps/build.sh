@@ -24,8 +24,6 @@ ldd libstdc++.so.6
 
 echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
-#echo Direct shared lib. dependencies:
-#readelf -d libmysharedlib.so
 
 echo Building C++ application...
 g++ main.cpp -L. -ldl -lstdc++ -lmysharedlib -Wl,-rpath=.
