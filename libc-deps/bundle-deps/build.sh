@@ -19,8 +19,8 @@ export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
 
 echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
-echo Direct shared lib. dependencies:
-readelf -d libmysharedlib.so
+#echo Direct shared lib. dependencies:
+#readelf -d libmysharedlib.so
 
 echo libstdc++.so.6 dependencies:
 ldd libstdc++.so.6
