@@ -28,4 +28,5 @@ g++ main.cpp -L. -ldl -lstdc++ -lmysharedlib -Wl,-rpath=.
 
 echo ""
 echo Running application...
+export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
 ./a.out
