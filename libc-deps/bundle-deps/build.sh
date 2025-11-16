@@ -16,7 +16,8 @@ echo Direct shared lib. dependencies:
 readelf -d libmysharedlib.so
 
 # copy libstdc++ library to current folder
-cp /lib/x86_64-linux-gnu/libc.so.6 .
+cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6 .
+#cp /lib/x86_64-linux-gnu/libc.so.6 .
 
 echo Building C++ application...
 # Optional define: -DUSE_DLOPEN
