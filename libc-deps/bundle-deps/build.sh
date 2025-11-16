@@ -21,9 +21,9 @@ cp /lib/x86_64-linux-gnu/libstdc++.so.6 .
 
 echo Building C++ application...
 # Optional define: -DUSE_DLOPEN
-g++ main.cpp -L. -ldl -lmysharedlib -Wl,-rpath=.
+g++ main.cpp -L. -ldl -lstdc++ -lmysharedlib -Wl,-rpath=.
 
-#echo mainApp dependencies:
+#echo executable dependencies:
 #ldd a.out
 
 echo ""
