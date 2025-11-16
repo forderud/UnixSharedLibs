@@ -29,7 +29,7 @@ Article: [Multiple glibc libraries on a single host](https://stackoverflow.com/q
 | Drawbacks | * Need to build glibc from source.<br />  * Also need to build libstdc++ from source. |
 
 
-### ~~Alternative 4: Static linking to libgcc & libstdc++~~
+### ~~Alternative 4: Static linking to (libgcc &) libstdc++~~
 The `-static-libgcc` and `-static-libstdc++` linker flags are used to link to the static version of these dependent libraries. This eliminates run-time depdendencies to `libgcc_s.so` and `libstdc++.so`, but not to `libc.so` (glibc) that implements malloc/free.
 
 NOTE: Fedora/RedHat systems will need to install the [`libstdc++-static`](https://packages.fedoraproject.org/pkgs/gcc/libstdc++-static/) package.
