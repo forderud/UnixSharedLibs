@@ -1,4 +1,10 @@
-### Dependencies on Ubuntu 24:04:
+### Problem observed when trying to copy C/C++ libs to old distro
+```
+libc.so.6 dependencies:
+/bin/bash: relocation error: /host/libc-deps/bundle-deps/libc.so.6: symbol _dl_audit_symbind_alt version GLIBC_PRIVATE not defined in file ld-linux-x86-64.so.2 with link time reference
+```
+
+### Dependencies on Ubuntu 24:04
 ```
 Transitive shared lib. dependencies:
         linux-vdso.so.1 (0x00007ffc5f73e000)
