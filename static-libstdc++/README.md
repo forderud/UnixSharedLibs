@@ -1,4 +1,4 @@
-Reproducer for problem with `-static-libstdc++` in shared libraries
+Reproducer for problem with `-static-libstdc++` in shared libraries by Aleksei Skorodumov.
 
 **GOAL**: Develop a Linux shared library (.so) with as few run-time dependencies as possible, so that it becomes compatible with multiple distros of various age.
 
