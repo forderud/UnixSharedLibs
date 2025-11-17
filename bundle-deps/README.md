@@ -8,7 +8,7 @@ libc.so.6 dependencies:
 /bin/bash: relocation error: /host/bundle-deps/libc.so.6: symbol _dl_audit_symbind_alt version GLIBC_PRIVATE not defined in file ld-linux-x86-64.so.2 with link time reference
 ```
 
-### Dependencies on Ubuntu 24:04
+### Ubuntu 24:04 dependency tree
 ```
 Transitive shared lib. dependencies:
         linux-vdso.so.1
