@@ -12,7 +12,7 @@ Kernel versions taken from Wikipedia [Ubuntu version history](https://en.wikiped
 * glibc releases: https://sourceware.org/glibc/wiki/Glibc%20Timeline
 * Glibc readme: https://github.com/bminor/glibc/blob/master/README (glibc 2.24-2.42 require Linux 3.2 or newer)
 * [GCC Releases](https://gcc.gnu.org/releases.html) with dates
-* GNU C++ Library Manual: [Chapter 2. Setup](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/doc/html/manual/setup.html) - For GCC 4.6.0 and later, glibc 2.3 or later is required.
+* GNU C++ Library Manual: [Chapter 2. Setup](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/doc/html/manual/setup.html) - glibc 2.3 or later is required for GCC >=4.6.
 
 #### Distro packages
 * Ubuntu [`glibc` package](https://launchpad.net/ubuntu/+source/glibc): Glibc 2.23 in Xenial Xerus (16.04.7 LTS)
