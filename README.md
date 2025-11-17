@@ -8,8 +8,8 @@
 
 Kernel versions taken from Wikipedia [Ubuntu version history](https://en.wikipedia.org/wiki/Ubuntu_version_history#Table_of_versions) and [Fedora Linux release history](https://en.wikipedia.org/wiki/Fedora_Linux_release_history).
 
-### Links
-* glibc releases: https://sourceware.org/glibc/wiki/Glibc%20Timeline
+### Glibc/GCC links
+* Glibc releases: https://sourceware.org/glibc/wiki/Glibc%20Timeline
 * Glibc readme: https://github.com/bminor/glibc/blob/master/README (glibc 2.24-2.42 require Linux 3.2 or newer)
 * [GCC Releases](https://gcc.gnu.org/releases.html) with dates
 * GNU C++ Library Manual: [Chapter 2. Setup](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/doc/html/manual/setup.html) - glibc 2.3 or later is required for GCC >=4.6.
