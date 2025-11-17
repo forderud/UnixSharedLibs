@@ -1,6 +1,6 @@
 ### C/C++ libraries bundled with Linux distros
 
-| Distro       | Support Life    | Linux kernel | Glibc | GCC/libstdc++ |
+| Distro       | Support life    | Linux kernel | Glibc | GCC/libstdc++ |
 |--------------|-----------------|--------------|-------|---------------|
 | Ubuntu 18.04 |Apr '18 - Apr '28| 4.15         | 2.27  | 7             |
 | Ubuntu 24.04 |Apr '24 - Apr '34| 6.8          | 2.39  | 13            |
