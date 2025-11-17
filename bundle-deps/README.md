@@ -40,4 +40,4 @@ ld-linux-x86-64.so.2 dependencies:
 
 ## Links
 * [Multiple glibc libraries on a single host](https://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host) - mentions `-Wl,--rpath`/`-Wl,--dynamic-linker` and `LD_LIBRARY_PATH`/`LD_PRELOAD`
-* GNU binutils [LD](https://sourceware.org/binutils/docs/ld.html) doc - covers `LD_RUN_PATH`
+* GNU binutils [LD](https://sourceware.org/binutils/docs/ld.html) doc - covers `-rpath`/`LD_RUN_PATH`
