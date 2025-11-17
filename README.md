@@ -14,6 +14,6 @@ Kernel versions taken from Wikipedia [Ubuntu version history](https://en.wikiped
 * [GCC Releases](https://gcc.gnu.org/releases.html) with dates
 
 #### Distro packages
-* Ubuntu [glibc package](https://launchpad.net/ubuntu/+source/glibc): glibc 2.23 in Xenial Xerus (16.04.7 LTS)
+* Ubuntu [glibc package](https://launchpad.net/ubuntu/+source/glibc): Glibc 2.23 in Xenial Xerus (16.04.7 LTS)
 * Fedora [glibc package](https://packages.fedoraproject.org/pkgs/glibc/glibc/)
 * DistroWatch: https://distrowatch.com/table.php?distribution=redhat (glibc 2.28 since RHEL 8.10 and glibc 2.17 since RHEL 7.9)
