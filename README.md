@@ -15,6 +15,6 @@ Kernel versions taken from Wikipedia [Ubuntu version history](https://en.wikiped
 * GNU C++ Library Manual: [Chapter 2. Setup](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/doc/html/manual/setup.html) (glibc 2.3 or later is required for GCC >=4.6)
 
 ### Distro packages
-* Ubuntu [`glibc` package](https://launchpad.net/ubuntu/+source/glibc): Glibc 2.23 in Xenial Xerus (16.04.7 LTS)
+* Ubuntu [`glibc` package](https://launchpad.net/ubuntu/+source/glibc)
 * Fedora [`glibc` package](https://packages.fedoraproject.org/pkgs/glibc/glibc/), [`libstdc++` package](https://packages.fedoraproject.org/pkgs/gcc/libstdc++/)
 * DistroWatch: https://distrowatch.com/table.php?distribution=redhat (glibc 2.28 since RHEL 8.10 and glibc 2.17 since RHEL 7.9)
