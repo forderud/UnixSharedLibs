@@ -8,11 +8,12 @@ rm -f *.o *.so a.out
 echo Copying C/C++ library dependencies to current folder...
 cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6 .
 
+compile_flags="-std=c++17"
 link_flags="-Wl,-rpath=. -Wl,--dynamic-linker=/lib64/ld-linux-x86-64.so.2"
 
 echo ""
 echo Building shared C++ lib...
-g++ -fPIC -c mysharedlib.cpp -o mysharedlib.o
+g++ -fPIC $compile_flags -c mysharedlib.cpp -o mysharedlib.o
 g++ -shared -pthread mysharedlib.o $link_flags -o libmysharedlib.so
 
 # Attempts on enabling the bundled libstdc++ version
@@ -26,7 +27,7 @@ echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
 
 echo Building C++ application...
-g++ main.cpp -L. -lstdc++ -lmysharedlib $link_flags
+g++ $compile_flags main.cpp -L. -lstdc++ -lmysharedlib $link_flags
 
 #echo executable dependencies:
 #ldd a.out
