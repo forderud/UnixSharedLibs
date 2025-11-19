@@ -10,6 +10,8 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 collect2: error: ld returned 1 exit status
 ```
 
+Symbol versioning: `GCC 11.1.0: GLIBCXX_3.4.29, CXXABI_1.3.13`
+
 ### Ubuntu 24:04 dependency tree
 ```
 Transitive shared lib. dependencies:
