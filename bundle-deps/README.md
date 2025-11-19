@@ -4,8 +4,10 @@ Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https
 
 ### Problem observed when trying use bundled C/C++ libs
 ```
-libc.so.6 dependencies:
-/bin/bash: relocation error: /host/bundle-deps/libc.so.6: symbol _dl_audit_symbind_alt version GLIBC_PRIVATE not defined in file ld-linux-x86-64.so.2 with link time reference
+./libmysharedlib.so: undefined reference to `std::__exception_ptr::exception_ptr::_M_release()@CXXABI_1.3.13'
+./libmysharedlib.so: undefined reference to `std::__exception_ptr::exception_ptr::_M_addref()@CXXABI_1.3.13'
+./libmysharedlib.so: undefined reference to `std::__throw_bad_array_new_length()@GLIBCXX_3.4.29'
+collect2: error: ld returned 1 exit status
 ```
 
 ### Ubuntu 24:04 dependency tree
