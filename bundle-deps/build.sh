@@ -16,8 +16,8 @@ echo Building shared C++ lib...
 g++-13 -fPIC $compile_flags -c mysharedlib.cpp -o mysharedlib.o
 g++-13 -shared -pthread $link_flags -o libmysharedlib.so mysharedlib.o
 
-# Attempts on enabling the bundled libstdc++ version
-export LD_LIBRARY_PATH=`pwd`
+# Use bundled libstdc++ version
+#export LD_LIBRARY_PATH=`pwd`
 
 #echo libstdc++.so.6 dependencies:
 #ldd libstdc++.so.6
@@ -30,7 +30,7 @@ ldd libmysharedlib.so
 echo Building C++ application...
 # TODO: Switch back to g++
 # Add -Wl,--trace to list linked-to libraries
-gcc-7 $compile_flags main.cpp -L. -lmysharedlib
+gcc-7 $compile_flags main.cpp -L. -lmysharedlib $link_flags
 
 #echo executable dependencies:
 #ldd a.out
