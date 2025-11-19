@@ -28,10 +28,9 @@ ldd libmysharedlib.so
 #readelf -d libmysharedlib.so
 
 echo Building C++ application...
-# TODO: Switch back to g++
-# PROBLEM: Auto-linked libstdc++ is picked up from /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so instead of current dir.
+# Passing -nodefaultlibs to avoid auto-linking to /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so
 # Add -Wl,--trace to list linked-to libraries
-gcc-7 $compile_flags main.cpp -L. -lmysharedlib $link_flags
+g++-7 $compile_flags main.cpp -nodefaultlibs -L. -lc -lmysharedlib $link_flags
 
 #echo executable dependencies:
 #ldd a.out
