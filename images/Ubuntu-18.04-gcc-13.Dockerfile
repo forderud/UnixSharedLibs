@@ -20,7 +20,6 @@ RUN update-ca-certificates
 
 # Add repo with GCC 13
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
-    && apt-get update -y \
     # Install GCC 13
     && apt-get install --no-install-recommends -y \
         libstdc++-13-dev \
