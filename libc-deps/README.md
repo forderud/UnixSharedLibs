@@ -14,7 +14,7 @@ Details in [`bundle-libstdc++`](../bundle-libstdc++) sample.
 
 |   | Distribute libstdc++ with library |
 |---|-----------------------------------|
-| Benefit | Avoid compatibility problems by making the binary distribution self-contained. |
+| Benefit | Avoid libstdc++ compatibility problems by making the binary distribution more self-contained. |
 | Drawback | Adopters might not be interested in setting `-rpath` or `LD_LIBRARY_PATH` to use the custom libstdc++ library together with the rest of their codebase. |
 
 
