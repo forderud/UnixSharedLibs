@@ -25,6 +25,7 @@ export LD_LIBRARY_PATH=`pwd`
 
 echo Shared lib. dependencies:
 ldd libmysharedlib.so
+#readelf -d libmysharedlib.so
 
 echo Building C++ application...
 g++ $compile_flags main.cpp -L. -lstdc++ -lmysharedlib $link_flags
