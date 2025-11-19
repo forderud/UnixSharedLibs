@@ -11,7 +11,7 @@ cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6 .
 echo ""
 echo Building shared C++ lib...
 g++ -fPIC -c mysharedlib.cpp -o mysharedlib.o
-g++ -shared -pthread mysharedlib.o -Wl,-rpath=. -o libmysharedlib.so
+g++ -shared -pthread mysharedlib.o -Wl,-rpath=. -Wl,--dynamic-linker=/lib64/ld-linux-x86-64.so.2 -o libmysharedlib.so
 
 # Add current dir to library search path
 export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
@@ -23,7 +23,7 @@ echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
 
 echo Building C++ application...
-g++ main.cpp -L. -lstdc++ -lmysharedlib -Wl,-rpath=.
+g++ main.cpp -L. -lstdc++ -lmysharedlib -Wl,-rpath=. -Wl,--dynamic-linker=/lib64/ld-linux-x86-64.so.2
 
 #echo executable dependencies:
 #ldd a.out
