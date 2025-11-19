@@ -25,3 +25,6 @@ RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
     && apt-get install --no-install-recommends -y \
         libstdc++-13-dev \
         g++-13 \
+    # Set GCC 13 as default
+    && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 13 \
+      --slave /usr/bin/g++ g++ /usr/bin/g++-13
