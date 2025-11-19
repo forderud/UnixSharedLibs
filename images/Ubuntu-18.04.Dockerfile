@@ -1,5 +1,8 @@
 FROM ubuntu:18.04
 
+# Copy GEHC root certificates
+COPY gehealthcarerootca1.crt gehealthcarerootca2.crt /usr/local/share/ca-certificates
+
 # Install build tools
 RUN apt-get update && apt-get install -y \
     # developer tools
@@ -11,5 +14,4 @@ RUN apt-get update && apt-get install -y \
     libboost-dev
 
 # Install GEHC root certificates
-COPY gehealthcarerootca1.crt gehealthcarerootca2.crt /usr/local/share/ca-certificates
 RUN update-ca-certificates
