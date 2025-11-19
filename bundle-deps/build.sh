@@ -22,6 +22,7 @@ export LD_LIBRARY_PATH=`pwd`
 
 #echo libstdc++.so.6 dependencies:
 #ldd libstdc++.so.6
+#readelf -d libstdc++.so.6
 
 echo Shared lib. dependencies:
 ldd libmysharedlib.so
