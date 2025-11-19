@@ -13,8 +13,8 @@ link_flags="-Wl,-rpath=\$ORIGIN"  #"-Wl,--dynamic-linker=/lib64/ld-linux-x86-64.
 
 echo ""
 echo Building shared C++ lib...
-g++ -fPIC $compile_flags -c mysharedlib.cpp -o mysharedlib.o
-g++ -fPIC -shared -pthread $link_flags -o libmysharedlib.so mysharedlib.o
+g++-13 -fPIC $compile_flags -c mysharedlib.cpp -o mysharedlib.o
+g++-13 -fPIC -shared -pthread $link_flags -o libmysharedlib.so mysharedlib.o
 
 # Attempts on enabling the bundled libstdc++ version
 export LD_LIBRARY_PATH=`pwd`
@@ -29,7 +29,7 @@ ldd libmysharedlib.so
 #readelf -d libmysharedlib.so
 
 echo Building C++ application...
-g++ -fPIC $compile_flags main.cpp -L. -lstdc++ -lmysharedlib $link_flags
+g++-7 -fPIC $compile_flags main.cpp -L. -lstdc++ -lmysharedlib $link_flags
 
 #echo executable dependencies:
 #ldd a.out
