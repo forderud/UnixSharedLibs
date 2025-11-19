@@ -29,6 +29,7 @@ ldd libmysharedlib.so
 
 echo Building C++ application...
 # TODO: Switch back to g++
+# PROBLEM: Auto-linked libstdc++ is picked up from /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so instead of current dir.
 # Add -Wl,--trace to list linked-to libraries
 gcc-7 $compile_flags main.cpp -L. -lmysharedlib $link_flags
 
