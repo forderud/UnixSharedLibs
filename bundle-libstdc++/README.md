@@ -1,7 +1,7 @@
 Example of bundling a new `libstdc++` version with a shared library to allow it to run on older Linux distros.
 
 ### g++ libstdc++ linking problem
-It seems like `g++` will be default link to the libstdc++ library distributed with the compiler. This causes problem when one instead want to link to a newer libstdc++ version.
+It seems like `g++` will be default link to the libstdc++ version distributed with the compiler. This causes problem when one instead want to link to a newer libstdc++ version.
 
 Build error g++ implicitly links to a too old libstdc++ version:
 ```
