@@ -29,7 +29,9 @@ ldd libmysharedlib.so
 #readelf -d libmysharedlib.so
 
 echo Building C++ application...
-g++-7 -fPIC $compile_flags main.cpp -L. -lmysharedlib
+# TODO: Switch back to g++
+# Add -Wl,--trace to list linked-to libraries
+gcc-7 -fPIC $compile_flags main.cpp -L. -lmysharedlib
 
 #echo executable dependencies:
 #ldd a.out
