@@ -13,36 +13,6 @@ collect2: error: ld returned 1 exit status
 
 This problem can be worked around by passing `-nodefaultlibs -lc` to suppress automatic libstdc++ linking. Not sure if this will work in all situations though.
 
-### Ubuntu 24:04 dependency tree
-```
-Transitive shared lib. dependencies:
-        linux-vdso.so.1
-        libstdc++.so.6 => /host/bundle-libstdc++/libstdc++.so.6
-        libgcc_s.so.1 => /host/bundle-libstdc++/libgcc_s.so.1
-        libc.so.6 => /host/bundle-libstdc++/libc.so.6
-        /lib64/ld-linux-x86-64.so.2
-        libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6
-
-libstdc++.so.6 dependencies:
-        linux-vdso.so.1
-        libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6
-        libc.so.6 => /host/bundle-libstdc++/libc.so.6
-        /lib64/ld-linux-x86-64.so.2
-        libgcc_s.so.1 => /host/bundle-libstdc++/libgcc_s.so.1
-
-libgcc_s.so.1 dependencies:
-        linux-vdso.so.1
-        libc.so.6 => /host/bundle-libstdc++/libc.so.6
-        /lib64/ld-linux-x86-64.so.2
-
-libc.so.6 dependencies:
-        /lib64/ld-linux-x86-64.so.2
-        linux-vdso.so.1
-
-ld-linux-x86-64.so.2 dependencies:
-        statically linked
-```
-
 ## Links
 * [Multiple glibc libraries on a single host](https://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host) - mentions `-Wl,--rpath`/`-Wl,--dynamic-linker` and `LD_LIBRARY_PATH`/`LD_PRELOAD`
 * GNU binutils [LD](https://sourceware.org/binutils/docs/ld.html) doc - covers `-rpath`/`LD_RUN_PATH`
