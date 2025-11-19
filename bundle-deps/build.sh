@@ -13,8 +13,9 @@ echo Building shared C++ lib...
 g++ -fPIC -c mysharedlib.cpp -o mysharedlib.o
 g++ -shared -pthread mysharedlib.o -Wl,-rpath=. -Wl,--dynamic-linker=/lib64/ld-linux-x86-64.so.2 -o libmysharedlib.so
 
-# Add current dir to library search path
+# Attempts on enabling the bundled libstdc++ version
 export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
+export LD_PRELOAD=/host/bundle-deps/libstdc++.so.6
 
 echo libstdc++.so.6 dependencies:
 ldd libstdc++.so.6
