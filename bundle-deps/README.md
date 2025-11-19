@@ -1,9 +1,9 @@
-Attempt on bundling new C/C++ libs with a shared library to allow it to run on older Linux distros.
+Test of bundling a new C++ lib with a shared library to allow it to run on older Linux distros.
 
-Quote from: [Option Soup: the subtle pitfalls of combining compiler flags](https://hacks.mozilla.org/2024/01/option-soup-the-subtle-pitfalls-of-combining-compiler-flags/): "There are other ways to use a different libstdc++ than available on the system, such as using dynamic linking and setting an `RPATH` to link with a bundled version."
+### g++ libstdc++ linking problem
+It seems like `g++` will be default link to the libstdc++ library distributed with the compiler. This causes problem when one instead want to link to a newer libstdc++ version.
 
-### Problem observed when trying use bundled C/C++ libs
-Build error when attmepting to link to a shared library compiled with g++ 13.1.0 from g++ 7.5.0:
+Build error g++ implicitly links to a too old libstdc++ version:
 ```
 ./libmysharedlib.so: undefined reference to `std::__exception_ptr::exception_ptr::_M_release()@CXXABI_1.3.13'
 ./libmysharedlib.so: undefined reference to `std::__exception_ptr::exception_ptr::_M_addref()@CXXABI_1.3.13'
@@ -11,7 +11,7 @@ Build error when attmepting to link to a shared library compiled with g++ 13.1.0
 collect2: error: ld returned 1 exit status
 ```
 
-Symbol versioning: `GCC 11.1.0: GLIBCXX_3.4.29, CXXABI_1.3.13`
+This problem can be worked around by passing `-nodefaultlibs -lc` to suppress automatic libstdc++ linking. Not sure if this will work in all situations though.
 
 ### Ubuntu 24:04 dependency tree
 ```
