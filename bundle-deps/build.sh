@@ -18,12 +18,12 @@ g++ -shared -pthread mysharedlib.o $link_flags -o libmysharedlib.so
 
 # Attempts on enabling the bundled libstdc++ version
 export LD_LIBRARY_PATH=`pwd`
-export LD_PRELOAD=/host/bundle-deps/libstdc++.so.6
+#export LD_PRELOAD=/host/bundle-deps/libstdc++.so.6
 
-echo libstdc++.so.6 dependencies:
-ldd libstdc++.so.6
+#echo libstdc++.so.6 dependencies:
+#ldd libstdc++.so.6
 
-echo Transitive shared lib. dependencies:
+echo Shared lib. dependencies:
 ldd libmysharedlib.so
 
 echo Building C++ application...
