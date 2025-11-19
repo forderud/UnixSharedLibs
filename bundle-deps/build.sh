@@ -14,7 +14,7 @@ link_flags="-Wl,-rpath=."  #"-Wl,--dynamic-linker=/lib64/ld-linux-x86-64.so.2"
 echo ""
 echo Building shared C++ lib...
 g++ -fPIC $compile_flags -c mysharedlib.cpp -o mysharedlib.o
-g++ -fPIC -shared -pthread mysharedlib.o $link_flags -o libmysharedlib.so
+g++ -fPIC -shared -pthread $link_flags -o libmysharedlib.so mysharedlib.o
 
 # Attempts on enabling the bundled libstdc++ version
 export LD_LIBRARY_PATH=`pwd`
