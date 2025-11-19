@@ -11,17 +11,11 @@ g++ -fPIC -c mysharedlib.cpp -o mysharedlib.o
 g++ -shared -pthread mysharedlib.o -Wl,-rpath=. -o libmysharedlib.so
 
 echo Copying C/C++ library dependencies to current folder...
-cp /lib/x86_64-linux-gnu/libstdc++.so.6 /lib/x86_64-linux-gnu/libgcc_s.so.1 /lib/x86_64-linux-gnu/libc.so.6 /lib64/ld-linux-x86-64.so.2 .
+cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6 .
 
 # Add current dir to library search path
 export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
 
-echo ld-linux-x86-64.so.2 dependencies:
-ldd ld-linux-x86-64.so.2
-echo libgcc_s.so.1 dependencies:
-ldd libgcc_s.so.1
-echo libc.so.6 dependencies:
-ldd libc.so.6
 echo libstdc++.so.6 dependencies:
 ldd libstdc++.so.6
 
