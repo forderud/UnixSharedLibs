@@ -23,7 +23,7 @@ echo Transitive shared lib. dependencies:
 ldd libmysharedlib.so
 
 echo Building C++ application...
-g++ main.cpp -L. -ldl -lstdc++ -lmysharedlib -Wl,-rpath=.
+g++ main.cpp -L. -lstdc++ -lmysharedlib -Wl,-rpath=.
 
 #echo executable dependencies:
 #ldd a.out
