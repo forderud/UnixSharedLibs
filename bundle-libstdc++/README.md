@@ -17,22 +17,22 @@ This problem can be worked around by passing `-nodefaultlibs -lc` to suppress au
 ```
 Transitive shared lib. dependencies:
         linux-vdso.so.1
-        libstdc++.so.6 => /host/bundle-deps/libstdc++.so.6
-        libgcc_s.so.1 => /host/bundle-deps/libgcc_s.so.1
-        libc.so.6 => /host/bundle-deps/libc.so.6
+        libstdc++.so.6 => /host/bundle-libstdc++/libstdc++.so.6
+        libgcc_s.so.1 => /host/bundle-libstdc++/libgcc_s.so.1
+        libc.so.6 => /host/bundle-libstdc++/libc.so.6
         /lib64/ld-linux-x86-64.so.2
         libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6
 
 libstdc++.so.6 dependencies:
         linux-vdso.so.1
         libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6
-        libc.so.6 => /host/bundle-deps/libc.so.6
+        libc.so.6 => /host/bundle-libstdc++/libc.so.6
         /lib64/ld-linux-x86-64.so.2
-        libgcc_s.so.1 => /host/bundle-deps/libgcc_s.so.1
+        libgcc_s.so.1 => /host/bundle-libstdc++/libgcc_s.so.1
 
 libgcc_s.so.1 dependencies:
         linux-vdso.so.1
-        libc.so.6 => /host/bundle-deps/libc.so.6
+        libc.so.6 => /host/bundle-libstdc++/libc.so.6
         /lib64/ld-linux-x86-64.so.2
 
 libc.so.6 dependencies:
