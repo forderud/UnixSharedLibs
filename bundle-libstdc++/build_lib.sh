@@ -12,8 +12,8 @@ link_flags="-Wl,-rpath=\$ORIGIN"
 
 echo ""
 echo Building shared C++ lib that uses a recent libstdc++ version...
-g++-13 -fPIC -c ModernStuff.cpp -o ModernStuff.o
-g++-13 -shared -pthread $link_flags -o libModernStuff.so ModernStuff.o
+g++ -fPIC -c ModernStuff.cpp -o ModernStuff.o
+g++ -shared -pthread $link_flags -o libModernStuff.so ModernStuff.o
 
 #echo Shared lib. dependencies:
 #ldd libModernStuff.so
