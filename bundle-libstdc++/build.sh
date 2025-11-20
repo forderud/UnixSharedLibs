@@ -12,7 +12,7 @@ compile_flags="" #-std=c++17 -fabi-version=11" # GCC 7 ABI
 link_flags="-Wl,-rpath=\$ORIGIN"
 
 echo ""
-echo Building shared C++ lib...
+echo Building shared C++ lib that uses a recent libstdc++ version...
 g++-13 -fPIC $compile_flags -c ModernStuff.cpp -o ModernStuff.o
 g++-13 -shared -pthread $link_flags -o libModernStuff.so ModernStuff.o
 
@@ -28,7 +28,7 @@ g++-13 -shared -pthread $link_flags -o libModernStuff.so ModernStuff.o
 #ldd libModernStuff.so
 #readelf -d libModernStuff.so
 
-echo Building C++ application with old compiler...
+echo Building C++ application with old compiler with outdated libstdc++...
 # Passing -nodefaultlibs to avoid auto-linking to GCC-bundled libstdc++ (/usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so)
 # Add -Wl,--trace to list linked-to libraries
 g++-7 $compile_flags main.cpp -nodefaultlibs -L. -lc -lModernStuff $link_flags
