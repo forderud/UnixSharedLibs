@@ -2,6 +2,8 @@
 cd "$(dirname "$0")"
 set -e # stop on first failure
 
+# This script assumes that libstdc++.so.6 and libModernStuff.so are already present in the current dir.
+
 link_flags="-Wl,-rpath=\$ORIGIN"
 
 # Alternative mechanism for using bundled libstdc++ version
