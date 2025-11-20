@@ -32,7 +32,7 @@ echo Building C++ application with old compiler with outdated libstdc++...
 # Passing -nodefaultlibs to avoid auto-linking to GCC-bundled libstdc++ (/usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so)
 # TODO: Switch to -nostdlib++ after upgrading to GCC 13
 # Add -Wl,--trace to list linked-to libraries
-g++-7 $compile_flags main.cpp -nodefaultlibs -L. -lc -lModernStuff $link_flags
+g++-7 $compile_flags main.cpp -nodefaultlibs -L. -lc /host/bundle-libstdc++/libstdc++.so.6 -lModernStuff $link_flags
 
 #echo executable dependencies:
 #ldd a.out
