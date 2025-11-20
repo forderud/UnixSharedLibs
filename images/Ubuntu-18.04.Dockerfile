@@ -11,5 +11,5 @@ RUN apt-get update && apt-get install -y \
     libboost-dev
 
 # Install GEHC root certificates
-COPY gehealthcarerootca1.crt gehealthcarerootca2.crt /usr/share/ca-certificates
+COPY gehealthcarerootca1.crt gehealthcarerootca2.crt /usr/local/share/ca-certificates
 RUN update-ca-certificates
