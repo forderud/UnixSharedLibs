@@ -8,7 +8,7 @@ rm -f *.o *.so a.out
 echo Copying C/C++ library dependencies to current folder...
 cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6 .
 
-compile_flags="" #-std=c++17" # "-fabi-version=11" # GCC 7 ABI
+compile_flags="" #-std=c++17 -fabi-version=11" # GCC 7 ABI
 link_flags="-Wl,-rpath=\$ORIGIN"
 
 echo ""
