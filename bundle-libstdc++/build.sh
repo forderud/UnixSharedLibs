@@ -29,7 +29,7 @@ ldd libmysharedlib.so
 #readelf -d libmysharedlib.so
 
 echo Building C++ application...
-# Passing -nodefaultlibs to avoid auto-linking to /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so
+# Passing -nodefaultlibs to avoid auto-linking to GCC-bundled libstdc++ (/usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so)
 # Add -Wl,--trace to list linked-to libraries
 g++-7 $compile_flags main.cpp -nodefaultlibs -L. -lc -lmysharedlib $link_flags
 
