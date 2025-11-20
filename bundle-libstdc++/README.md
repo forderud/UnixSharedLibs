@@ -22,4 +22,5 @@ Mailing list request: [g++: How to link against custom libstdc++ version?](https
 * GCC [3.17 Options for Directory Search](https://gcc.gnu.org/onlinedocs/gcc/Directory-Options.html) - covers `-L`
 * [GCC 13](https://gcc.gnu.org/gcc-13/changes.html) introduced a new `-nostdlib++` option
 * GCC C++ [ABI Policy and Guidelines](https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html)
+* GCC [3.4 Options Controlling C Dialect](https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html) - covers `-std=`
 * GCC [3.5 Options Controlling C++ Dialect](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Dialect-Options.html) - covers `-fabi-version=n` and `-fabi-compat-version=n`
