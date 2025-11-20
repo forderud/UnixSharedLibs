@@ -13,6 +13,8 @@ collect2: error: ld returned 1 exit status
 
 This problem can be worked around by passing `-nodefaultlibs -lc` to suppress automatic libstdc++ linking. Not sure if this will work in all situations though.
 
+Mailing list request: [g++: How to link against custom libstdc++ version?](https://gcc.gnu.org/pipermail/libstdc++/2025-November/064445.html).
+
 ## Links
 * [Multiple glibc libraries on a single host](https://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host) - mentions `-Wl,--rpath`/`-Wl,--dynamic-linker` and `LD_LIBRARY_PATH`/`LD_PRELOAD`
 * GNU binutils [LD](https://sourceware.org/binutils/docs/ld.html) doc - covers `-rpath`/`LD_RUN_PATH`
