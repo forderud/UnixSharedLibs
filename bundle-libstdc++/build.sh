@@ -18,6 +18,7 @@ g++-13 -shared -pthread $link_flags -o libmysharedlib.so mysharedlib.o
 
 # Use bundled libstdc++ version
 #export LD_LIBRARY_PATH=`pwd`
+#export LD_PRELOAD=`pwd`/libstdc++.so.6
 
 #echo libstdc++.so.6 dependencies:
 #ldd libstdc++.so.6
