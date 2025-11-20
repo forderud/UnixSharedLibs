@@ -24,8 +24,8 @@ g++-13 -shared -pthread $link_flags -o libmysharedlib.so mysharedlib.o
 #ldd libstdc++.so.6
 #readelf -d libstdc++.so.6
 
-echo Shared lib. dependencies:
-ldd libmysharedlib.so
+#echo Shared lib. dependencies:
+#ldd libmysharedlib.so
 #readelf -d libmysharedlib.so
 
 echo Building C++ application...
