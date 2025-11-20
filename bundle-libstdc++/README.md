@@ -5,9 +5,9 @@ It seems like `g++` will be default link to the libstdc++ version distributed wi
 
 Build error g++ implicitly links to a too old libstdc++ version:
 ```
-./libmysharedlib.so: undefined reference to `std::__exception_ptr::exception_ptr::_M_release()@CXXABI_1.3.13'
-./libmysharedlib.so: undefined reference to `std::__exception_ptr::exception_ptr::_M_addref()@CXXABI_1.3.13'
-./libmysharedlib.so: undefined reference to `std::__throw_bad_array_new_length()@GLIBCXX_3.4.29'
+./libModernStuff.so: undefined reference to `std::__exception_ptr::exception_ptr::_M_release()@CXXABI_1.3.13'
+./libModernStuff.so: undefined reference to `std::__exception_ptr::exception_ptr::_M_addref()@CXXABI_1.3.13'
+./libModernStuff.so: undefined reference to `std::__throw_bad_array_new_length()@GLIBCXX_3.4.29'
 collect2: error: ld returned 1 exit status
 ```
 

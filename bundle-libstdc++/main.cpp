@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <cstdint>
-#include "mysharedlib.hpp"
+#include "ModernStuff.hpp"
 
 int main () {
     printf("executable built against glibc %d.%d\n", __GLIBC__, __GLIBC_MINOR__);

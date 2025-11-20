@@ -13,8 +13,8 @@ link_flags="-Wl,-rpath=\$ORIGIN"
 
 echo ""
 echo Building shared C++ lib...
-g++-13 -fPIC $compile_flags -c mysharedlib.cpp -o mysharedlib.o
-g++-13 -shared -pthread $link_flags -o libmysharedlib.so mysharedlib.o
+g++-13 -fPIC $compile_flags -c ModernStuff.cpp -o ModernStuff.o
+g++-13 -shared -pthread $link_flags -o libModernStuff.so ModernStuff.o
 
 # Use bundled libstdc++ version
 #export LD_LIBRARY_PATH=`pwd`
@@ -25,13 +25,13 @@ g++-13 -shared -pthread $link_flags -o libmysharedlib.so mysharedlib.o
 #readelf -d libstdc++.so.6
 
 #echo Shared lib. dependencies:
-#ldd libmysharedlib.so
-#readelf -d libmysharedlib.so
+#ldd libModernStuff.so
+#readelf -d libModernStuff.so
 
 echo Building C++ application...
 # Passing -nodefaultlibs to avoid auto-linking to GCC-bundled libstdc++ (/usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so)
 # Add -Wl,--trace to list linked-to libraries
-g++-7 $compile_flags main.cpp -nodefaultlibs -L. -lc -lmysharedlib $link_flags
+g++-7 $compile_flags main.cpp -nodefaultlibs -L. -lc -lModernStuff $link_flags
 
 #echo executable dependencies:
 #ldd a.out
