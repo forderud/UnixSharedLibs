@@ -15,9 +15,8 @@ echo Building shared C++ lib that uses a recent libstdc++ version...
 g++-13 -fPIC -c ModernStuff.cpp -o ModernStuff.o
 g++-13 -shared -pthread $link_flags -o libModernStuff.so ModernStuff.o
 
-# Use bundled libstdc++ version
+# Alternative mechanism for using bundled libstdc++ version
 #export LD_LIBRARY_PATH=`pwd`
-#export LD_PRELOAD=`pwd`/libstdc++.so.6
 
 #echo libstdc++.so.6 dependencies:
 #ldd libstdc++.so.6
