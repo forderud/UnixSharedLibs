@@ -11,7 +11,11 @@ Build error g++ implicitly links to a too old libstdc++ version:
 collect2: error: ld returned 1 exit status
 ```
 
-This problem can be worked around by passing `-nodefaultlibs -lc` to suppress automatic libstdc++ linking. Not sure if this will work in all situations though.
+This problem can be worked around by passing
+```
+-nodefaultlibs -lc `pwd`/libstdc++.so.6
+```
+to suppress automatic libstdc++ linking and instead link to the user-provided libstdc++.so.6. With GCC >=13 one can instead use `-nostdlib++`.
 
 Mailing list request: [g++: How to link against custom libstdc++ version?](https://gcc.gnu.org/pipermail/libstdc++/2025-November/064445.html).
 
