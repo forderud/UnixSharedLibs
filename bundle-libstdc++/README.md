@@ -17,7 +17,7 @@ This problem can be worked around by passing
 ```
 to suppress automatic libstdc++ linking and instead link to the user-provided libstdc++.so.6. With GCC >=13 one can instead use `-nostdlib++`.
 
-Mailing list request: [g++: How to link against custom libstdc++ version?](https://gcc.gnu.org/pipermail/libstdc++/2025-November/064445.html).
+Response from mailing list request: [g++: How to link against custom libstdc++ version?](https://gcc.gnu.org/pipermail/libstdc++/2025-November/064445.html): *It should work to use -nostdlib++ and add the full path to the newer libstdc++.so.6*.
 
 ## Links
 * [Multiple glibc libraries on a single host](https://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host) - mentions `-Wl,--rpath`/`-Wl,--dynamic-linker` and `LD_LIBRARY_PATH`/`LD_PRELOAD`
