@@ -18,10 +18,6 @@ g++-13 -shared -pthread $link_flags -o libModernStuff.so ModernStuff.o
 # Alternative mechanism for using bundled libstdc++ version
 #export LD_LIBRARY_PATH=`pwd`
 
-#echo libstdc++.so.6 dependencies:
-#ldd libstdc++.so.6
-#readelf -d libstdc++.so.6
-
 #echo Shared lib. dependencies:
 #ldd libModernStuff.so
 #readelf -d libModernStuff.so
