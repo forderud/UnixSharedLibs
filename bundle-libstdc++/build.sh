@@ -28,7 +28,7 @@ g++-13 -shared -pthread $link_flags -o libModernStuff.so ModernStuff.o
 #ldd libModernStuff.so
 #readelf -d libModernStuff.so
 
-echo Building C++ application...
+echo Building C++ application with old compiler...
 # Passing -nodefaultlibs to avoid auto-linking to GCC-bundled libstdc++ (/usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so)
 # Add -Wl,--trace to list linked-to libraries
 g++-7 $compile_flags main.cpp -nodefaultlibs -L. -lc -lModernStuff $link_flags
